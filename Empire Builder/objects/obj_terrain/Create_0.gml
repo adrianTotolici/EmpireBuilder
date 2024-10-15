@@ -8,8 +8,8 @@ depth=-y;
 x=room_width/2;
 y=room_height/2;
 camera_set_view_pos(view_camera[0],x-window_get_width()/2,y-window_get_height()/2);
-for (i=0;i<213;i+=1) {
-	for (j=0;j<120;j+=1) {
+for (i=0;i<(room_width/64);i+=1) {
+	for (j=0;j<(room_height/64);j+=1) {
 		tilemap_set_at_pixel(global.back_tiles,irandom_range(1,3),64*i,64*j);
 	}
 }

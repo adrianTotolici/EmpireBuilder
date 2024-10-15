@@ -1,49 +1,42 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_camera_control(){
-	view_x=camera_get_view_x(view_camera[0]);
-	view_y=camera_get_view_y(view_camera[0]);
-	
+
+	var _travel_x=0;
+	var _travel_y=0;
+	var _view_x=camera_get_view_x(view_camera[0]);
+	var _view_y=camera_get_view_y(view_camera[0]);
+
+	// zoom in 
 	if (mouse_wheel_down()){
-		if (size_w<view_get_wport(0)){
-			size_w+=32;
-			size_h+=18;
-			camera_set_view_size(view_camera[0],size_w,size_h);
-			camera_set_view_border(view_camera[0],size_w,size_h);
+		if (window_size_w<view_get_wport(0)){
+			window_size_w+=32;
+			window_size_h+=18;
+			camera_set_view_size(view_camera[0],window_size_w,window_size_h);
+			camera_set_view_border(view_camera[0],window_size_w,window_size_h);
 		}
-	}else if (mouse_wheel_up()){
-		if (size_w>320){
-			size_w-=32;
-			size_h-=18;
-			camera_set_view_size(view_camera[0],size_w,size_h);
-			camera_set_view_border(view_camera[0],size_w,size_h);
+	}
+	if (mouse_wheel_up()){
+		if (window_size_w>320){
+			window_size_w-=32;
+			window_size_h-=18;
+			camera_set_view_size(view_camera[0],window_size_w,window_size_h);
+			camera_set_view_border(view_camera[0],window_size_w,window_size_h);
 		}
 	}
 	
-	var _monitor_size_w=display_get_width();
-	var _monitor_size_h=display_get_height();
-	width_step=128;
-	height_step=72;
-	
-	if (keyboard_check_pressed(vk_add)){
-		for (i=0;i<10;i++){
-			if (window_size_w==(window_get_width()+(i*width_step))){
-				window_size_w=(window_get_width()+((i+1)*width_step));
-				window_size_h=(window_get_height()+((i+1)*height_step));
-				window_set_size(window_size_w,window_size_h);
-				break;
-			}
-		}
-	}else if (keyboard_check_pressed(vk_subtract)){
-		for (i=0;i<10;i++){
-			if (window_size_w==(window_get_width()+(i+1)*width_step)){
-				window_size_w=(window_get_width()+(i*width_step));
-				window_size_h=(window_get_height()+(i*height_step));
-				window_set_size(window_size_w,window_size_h);
-				break;
-			}
-		}
-		
+	if (keyboard_check(ord("W")) || keyboard_check(vk_up)) {
+		_travel_y=-camera_speed;
 	}
-	window_set_position(_monitor_size_w/2-window_size_w/2,_monitor_size_h/2-window_size_h/2);
+	if (keyboard_check(ord("S")) || keyboard_check(vk_down)) {
+		_travel_y=+camera_speed;
+	}
+	if (keyboard_check(ord("A")) || keyboard_check(vk_left)) {
+		_travel_x=-camera_speed;
+	}
+	if (keyboard_check(ord("D")) || keyboard_check(vk_right)) {
+		_travel_x=+camera_speed;
+	}
+	
+	camera_set_view_pos(view_camera[0], _view_x+_travel_x, _view_y+_travel_y);
 }
