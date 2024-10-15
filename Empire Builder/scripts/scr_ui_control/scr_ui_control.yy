@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_camera_control",
+  "%Name":"scr_ui_control",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_camera_control",
+  "name":"scr_ui_control",
   "parent":{
     "name":"game_play",
     "path":"folders/Scripts/game_play.yy",

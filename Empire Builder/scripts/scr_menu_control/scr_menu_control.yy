@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_camera_control",
+  "%Name":"scr_menu_control",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_camera_control",
+  "name":"scr_menu_control",
   "parent":{
-    "name":"game_play",
-    "path":"folders/Scripts/game_play.yy",
+    "name":"main_menu",
+    "path":"folders/Scripts/main_menu.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
