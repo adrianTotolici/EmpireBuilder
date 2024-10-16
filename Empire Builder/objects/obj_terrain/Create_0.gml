@@ -5,11 +5,15 @@ global.back_tiles = layer_tilemap_create(global.back_layer, 0, 0, ts_terrain, ro
 depth=-y;
 
 //position x and position y to be random chosen on map
-x=room_width/2;
-y=room_height/2;
+rand_x = irandom_range(0, room_width);
+rand_y = irandom_range(0, room_height);
+x=rand_x;
+y=rand_y;
 camera_set_view_pos(view_camera[0],x-window_get_width()/2,y-window_get_height()/2);
 for (i=0;i<(room_width/64);i+=1) {
 	for (j=0;j<(room_height/64);j+=1) {
 		tilemap_set_at_pixel(global.back_tiles,irandom_range(1,3),64*i,64*j);
 	}
 }
+
+instance_create_layer(x, y, "Buildings", obj_base_lvl0);

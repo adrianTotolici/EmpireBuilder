@@ -1,5 +1,5 @@
 /// @description vars
-depth =obj_terrain.depth-1;
+depth =obj_terrain.depth-2;
 x_size_ui=window_get_width();
 y_size_ui=window_get_height();
 ui_button_scale=2;
