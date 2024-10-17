@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_move_humans_to_resources",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_move_humans_to_resources",
+  "parent":{
+    "name":"game_play",
+    "path":"folders/Scripts/game_play.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

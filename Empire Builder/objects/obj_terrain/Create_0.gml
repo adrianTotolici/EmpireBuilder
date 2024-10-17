@@ -2,6 +2,8 @@
 
 global.back_layer=layer_create(-1);
 global.back_tiles = layer_tilemap_create(global.back_layer, 0, 0, ts_terrain, room_width,room_height);
+global.food_gather=0;
+
 depth=-y;
 
 //position x and position y to be random chosen on map
@@ -17,5 +19,4 @@ for (i=0;i<(room_width/64);i+=1) {
 }
 
 instance_create_layer(x, y, "Terrain", obj_base_lvl0);
-instance_create_layer(x+64, y+64, "Terrain", obj_berry_bush);
-instance_create_layer(x+64, y+64, "Terrain", obj_tribal_human);
+berybush = instance_create_layer(x+256, y+124, "Terrain", obj_berry_bush);

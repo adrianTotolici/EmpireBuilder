@@ -4,14 +4,13 @@
 // Inherit the parent event
 event_inherited();
 
-target_x = 0; // X coordinate of point B
-target_y = 0; // Y coordinate of point B
-speed =  0.5; // Speed of the object
+target_x = 0;
+target_y = 0; 
 
-// In the Step event
-move_towards_point(target_x, target_y, speed);
+human_created=false;
 
-// Stop the object when it reaches the target
-if (point_distance(x, y, target_x, target_y) < speed) {
-    speed = 0;
-}
+spr_up=spr_human_move_up;
+spr_down=spr_human_move_down;
+spr_side=spr_human_move_side;
+spr_stand=spr_human_stand;
+
