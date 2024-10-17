@@ -10,6 +10,7 @@ if(human_created){
 move_towards_point(target_x, target_y, speed);
 if (point_distance(x, y, target_x, target_y) < speed) {
 	speed = 0;
-	scr_gather_resources();
-	show_debug_message("resource food="+string(global.food_gather));
+	instance_destroy();
+	var _resources = instance_position(mousex, mousey, obj_par_resources);
+	_resources.ocupied=true;
 }
