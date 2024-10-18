@@ -3,6 +3,10 @@ function scr_ui_control(){
 	var _my=device_mouse_y_to_gui(0);
 	var _ui=obj_ui;
 	
+	//prices
+	//human 10 food;
+	var human_price=10;
+	
 	//press exit main menu button
 	if (mouse_check_button_pressed(mb_left) && _my>=12 && _my<=_ui.sprite_size-12 && _mx>=_ui.x_size_ui-(_ui.sprite_size*_ui.ui_button_scale) && _mx<=_ui.x_size_ui){
 		game_restart();
@@ -19,16 +23,17 @@ function scr_ui_control(){
 		}
 	}
 	
-	// show debug
-	if (keyboard_check_released(vk_f1)){
-		switch (_ui.show_debug){
-			case true:
-				_ui.show_debug=false;
-				break;
-			default:
-				_ui.show_debug=true;
-				break;
-		}
+
+	
+	if (mouse_check_button_pressed(mb_right)){
+		_ui.ui_gather_selected=false;
 	}
 
+	// build human menu button
+	if (mouse_check_button_pressed(mb_left) && _my>y_size_ui/2-15 && _my<y_size_ui/2+20 && _mx>0 && _mx<sprite_size*1.5-10 && _ui._show_base_menu){
+		if (global.food_gather>=10){
+			global.food_gather -=10;
+			global.pop += 1;
+		}
+	}
 }

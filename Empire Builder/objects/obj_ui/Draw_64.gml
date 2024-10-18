@@ -38,7 +38,9 @@ if (global.food_gather>=1){
 	}
 	
 //show base menu
-draw_set_color(c_white);
-draw_sprite_ext(spr_ui_button_black_background,0,0,y_size_ui/2,1.5,1,0,c_white,1);
-draw_sprite_ext(spr_ui_population,0,sprite_size/2,y_size_ui/2,0.5,0.5,0,c_white,1);
-draw_text(55,y_size_ui/2-7,"+ 1")
+if (_show_base_menu){
+	draw_set_color(c_white);
+	draw_sprite_ext(spr_ui_button_black_background,0,0,y_size_ui/2,1.5,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_population,0,sprite_size/2,y_size_ui/2,0.5,0.5,0,c_white,1);
+	draw_text(55,y_size_ui/2-7,"+ 1")
+}
