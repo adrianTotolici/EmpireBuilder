@@ -2,9 +2,12 @@
 
 global.back_layer=layer_create(-1);
 global.back_tiles = layer_tilemap_create(global.back_layer, 0, 0, ts_terrain, room_width,room_height);
-global.food_gather=0;
+global.food_gather=10;
+global.resources_gather=10;
 global.pop=1;
 global.pop_used=0;
+
+alarm_started = false;
 
 depth=-y;
 
@@ -25,3 +28,6 @@ berybush = instance_create_layer(x+256, y+124, "Terrain", obj_berry_bush);
 berybush = instance_create_layer(x-256, y-124, "Terrain", obj_berry_bush);
 berybush = instance_create_layer(x+256, y-124, "Terrain", obj_berry_bush);
 berybush = instance_create_layer(x-256, y+124, "Terrain", obj_berry_bush);
+berybush = instance_create_layer(x-356, y+124, "Terrain", obj_grass_bush);
+berybush = instance_create_layer(x-256, y+256, "Terrain", obj_grass_bush);
+berybush = instance_create_layer(x-25, y+10, "Terrain", obj_grass_bush);

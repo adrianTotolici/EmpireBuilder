@@ -1,19 +1,23 @@
 {
   "$GMObject":"",
-  "%Name":"obj_terrain",
+  "%Name":"obj_par_construction",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_terrain",
+  "name":"obj_par_construction",
   "overriddenProperties":[],
   "parent":{
-    "name":"terrain",
-    "path":"folders/Objects/terrain.yy",
+    "name":"construction",
+    "path":"folders/Objects/resources/construction.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_par_resources",
+    "path":"objects/obj_par_resources/obj_par_resources.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
