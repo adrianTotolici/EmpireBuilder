@@ -84,6 +84,7 @@
     {"id":{"name":"spr_ui_button_white_background","path":"sprites/spr_ui_button_white_background/spr_ui_button_white_background.yy",},},
     {"id":{"name":"spr_ui_food","path":"sprites/spr_ui_food/spr_ui_food.yy",},},
     {"id":{"name":"spr_ui_gather","path":"sprites/spr_ui_gather/spr_ui_gather.yy",},},
+    {"id":{"name":"spr_ui_population","path":"sprites/spr_ui_population/spr_ui_population.yy",},},
     {"id":{"name":"spr_ui_select","path":"sprites/spr_ui_select/spr_ui_select.yy",},},
     {"id":{"name":"ts_terrain","path":"tilesets/ts_terrain/ts_terrain.yy",},},
   ],
