@@ -1,21 +1,20 @@
 /// @description call interaction script
-scr_ui_control();
-
 
 
 if (mouse_check_button_pressed(mb_left)){
 	var _mx=device_mouse_x_to_gui(0);
 	var _my=device_mouse_y_to_gui(0);
-	if( _my<y_size_ui-12 && _my>y_size_ui-sprite_size+12 && _mx>x_size_ui/2 && _mx<x_size_ui/2+sprite_size){
-		ui_gather_selected=true;
-	}else{
-		scr_move_humans_to_resources(mouse_x,mouse_y);
-		ui_gather_selected=false;
-	}
+	scr_ui_control();
+	scr_move_humans_to_resources(mouse_x,mouse_y);
 }
 
 if (show_debug){
 	show_debug_log(true);
 }else{
 	show_debug_log(false);
+}
+
+if (_show_warning && !start_alarm){
+	alarm[0]=120;
+	start_alarm=true
 }

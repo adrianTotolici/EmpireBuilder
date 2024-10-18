@@ -4,5 +4,4 @@ if (harvested && ocupied && time_loop){
 	global.food_gather = global.food_gather+food_gather;
 	time_loop=false;
 	alarm[0]=gather_loop;
-	show_debug_message("resource food="+string(global.food_gather));
 }
