@@ -52,6 +52,7 @@
   },
   "name":"Empire Builder",
   "resources":[
+    {"id":{"name":"fnt_ui_1","path":"fonts/fnt_ui_1/fnt_ui_1.yy",},},
     {"id":{"name":"fnt_ui","path":"fonts/fnt_ui/fnt_ui.yy",},},
     {"id":{"name":"obj_base_lvl0","path":"objects/obj_base_lvl0/obj_base_lvl0.yy",},},
     {"id":{"name":"obj_berry_bush","path":"objects/obj_berry_bush/obj_berry_bush.yy",},},
@@ -89,6 +90,7 @@
     {"id":{"name":"spr_ui_button_black_background","path":"sprites/spr_ui_button_black_background/spr_ui_button_black_background.yy",},},
     {"id":{"name":"spr_ui_button_white_background","path":"sprites/spr_ui_button_white_background/spr_ui_button_white_background.yy",},},
     {"id":{"name":"spr_ui_food","path":"sprites/spr_ui_food/spr_ui_food.yy",},},
+    {"id":{"name":"spr_ui_game_titile","path":"sprites/spr_ui_game_titile/spr_ui_game_titile.yy",},},
     {"id":{"name":"spr_ui_gather","path":"sprites/spr_ui_gather/spr_ui_gather.yy",},},
     {"id":{"name":"spr_ui_materials","path":"sprites/spr_ui_materials/spr_ui_materials.yy",},},
     {"id":{"name":"spr_ui_population","path":"sprites/spr_ui_population/spr_ui_population.yy",},},

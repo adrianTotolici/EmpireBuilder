@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_ui",
+  "%Name":"fnt_ui_large",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":13,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":22,
   "maintainGms1Font":false,
-  "name":"fnt_ui",
+  "name":"fnt_ui_large",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

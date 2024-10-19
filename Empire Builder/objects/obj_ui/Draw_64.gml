@@ -2,8 +2,9 @@
 draw_set_font(fnt_ui);
 draw_set_color(c_black);
 draw_text(0, 0,_text_to_display);
-draw_text(0, 20, "FPS = " + string(fps));
-
+if (show_debug){
+	draw_text(0, 20, "FPS = " + string(fps));
+}
 // Draw ui buttons
 draw_set_color(c_white);
 draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*ui_button_scale),(sprite_size/2),ui_button_scale,1,0,c_white,1);

@@ -4,7 +4,7 @@ global.back_layer=layer_create(-1);
 global.back_tiles = layer_tilemap_create(global.back_layer, 0, 0, ts_terrain, room_width,room_height);
 global.food_gather=10;
 global.resources_gather=10;
-global.pop=1;
+global.pop=5;
 global.pop_used=0;
 global.terrain_resource_matrix= [];
 
