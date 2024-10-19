@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_populate_map",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_populate_map",
+  "parent":{
+    "name":"game_play",
+    "path":"folders/Scripts/game_play.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

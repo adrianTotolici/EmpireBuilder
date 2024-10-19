@@ -72,6 +72,7 @@
     {"id":{"name":"scr_camera_control","path":"scripts/scr_camera_control/scr_camera_control.yy",},},
     {"id":{"name":"scr_map_interactions","path":"scripts/scr_map_interactions/scr_map_interactions.yy",},},
     {"id":{"name":"scr_menu_control","path":"scripts/scr_menu_control/scr_menu_control.yy",},},
+    {"id":{"name":"scr_populate_map","path":"scripts/scr_populate_map/scr_populate_map.yy",},},
     {"id":{"name":"scr_ui_control","path":"scripts/scr_ui_control/scr_ui_control.yy",},},
     {"id":{"name":"spr_berry_bush_ocupied","path":"sprites/spr_berry_bush_ocupied/spr_berry_bush_ocupied.yy",},},
     {"id":{"name":"spr_berry_bush","path":"sprites/spr_berry_bush/spr_berry_bush.yy",},},
