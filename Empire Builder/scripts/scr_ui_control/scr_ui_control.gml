@@ -5,7 +5,7 @@ function scr_ui_control(){
 	
 	//prices
 	//human 10 food;
-	var human_price=10;
+	var _human_price=10;
 	
 	//press exit main menu button
 	if (mouse_check_button_pressed(mb_left) && _my>=12 && _my<=_ui.sprite_size-12 && _mx>=_ui.x_size_ui-(_ui.sprite_size*_ui.ui_button_scale) && _mx<=_ui.x_size_ui){
@@ -31,8 +31,8 @@ function scr_ui_control(){
 
 	// build human menu button
 	if (mouse_check_button_pressed(mb_left) && _my>y_size_ui/2-15 && _my<y_size_ui/2+20 && _mx>0 && _mx<sprite_size*1.5-10 && _ui._show_base_menu){
-		if (global.food_gather>=10){
-			global.food_gather -=10;
+		if (global.food_gather>=_human_price){
+			global.food_gather -=_human_price;
 			global.pop += 1;
 		}
 	}

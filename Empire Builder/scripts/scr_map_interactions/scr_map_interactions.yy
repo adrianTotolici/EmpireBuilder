@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_move_humans_to_resources",
+  "%Name":"scr_map_interactions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_move_humans_to_resources",
+  "name":"scr_map_interactions",
   "parent":{
     "name":"game_play",
     "path":"folders/Scripts/game_play.yy",

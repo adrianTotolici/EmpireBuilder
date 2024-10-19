@@ -2,7 +2,7 @@
 if (mouse_check_button_pressed(mb_left)){
 	var _mx=device_mouse_x_to_gui(0);
 	var _my=device_mouse_y_to_gui(0);
-	scr_move_humans_to_resources(mouse_x,mouse_y);
+	scr_map_interactions(mouse_x,mouse_y);
 	scr_ui_control();
 }
 

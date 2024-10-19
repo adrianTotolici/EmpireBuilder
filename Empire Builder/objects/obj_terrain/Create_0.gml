@@ -30,4 +30,3 @@ berybush = instance_create_layer(x+256, y-124, "Terrain", obj_berry_bush);
 berybush = instance_create_layer(x-256, y+124, "Terrain", obj_berry_bush);
 berybush = instance_create_layer(x-356, y+124, "Terrain", obj_grass_bush);
 berybush = instance_create_layer(x-256, y+256, "Terrain", obj_grass_bush);
-berybush = instance_create_layer(x-25, y+10, "Terrain", obj_grass_bush);

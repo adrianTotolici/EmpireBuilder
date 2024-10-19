@@ -6,8 +6,6 @@ event_inherited();
 
 target_x = 0;
 target_y = 0; 
-mousex = 0;
-mousey= 0;
 
 human_created=false;
 
