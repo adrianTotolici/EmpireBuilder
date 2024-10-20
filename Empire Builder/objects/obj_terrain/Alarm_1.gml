@@ -1,0 +1,2 @@
+/// @description game lost
+room_goto(rm_main_menu);

@@ -87,6 +87,7 @@
     {"id":{"name":"spr_humans_movement","path":"sprites/spr_humans_movement/spr_humans_movement.yy",},},
     {"id":{"name":"spr_main_building_lvl0","path":"sprites/spr_main_building_lvl0/spr_main_building_lvl0.yy",},},
     {"id":{"name":"spr_terrain","path":"sprites/spr_terrain/spr_terrain.yy",},},
+    {"id":{"name":"spr_ui_build","path":"sprites/spr_ui_build/spr_ui_build.yy",},},
     {"id":{"name":"spr_ui_button_black_background","path":"sprites/spr_ui_button_black_background/spr_ui_button_black_background.yy",},},
     {"id":{"name":"spr_ui_button_white_background","path":"sprites/spr_ui_button_white_background/spr_ui_button_white_background.yy",},},
     {"id":{"name":"spr_ui_food","path":"sprites/spr_ui_food/spr_ui_food.yy",},},
