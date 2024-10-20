@@ -10,8 +10,11 @@ start_alarm=false;
 _show_base_menu=false;
 
 display_set_gui_size(x_size_ui,y_size_ui);
-_text_to_display = "Empire Building V0.1";
+_text_to_display = "Empire Building V0.2";
 _text_menu_button = "Menu";
 _text_warning = "";
 
 ui_gather_selected=false;
+ui_build_selected=false;
+obj_to_build_sel=false;
+build_obj=noone;

@@ -14,16 +14,26 @@ function scr_ui_control(){
 	
 	// gather button pressed
 	if( _my<_ui.y_size_ui-12 && _my>_ui.y_size_ui-_ui.sprite_size+12 && _mx>_ui.x_size_ui/2 && _mx<_ui.x_size_ui/2+_ui.sprite_size){
-		if (global.pop-global.pop_used >0){
-			_ui.ui_gather_selected=true;
-		}else{
-			_ui._text_warning="No more population"
-			_ui._show_warning=true;
-			
+		if (_ui.ui_gather_selected){
+			_ui.ui_gather_selected=false;
+		}else{	
+			if (global.pop-global.pop_used >0){
+				_ui.ui_gather_selected=true;
+			}else{
+				_ui._text_warning="No more population"
+				_ui._show_warning=true;			
+			}
 		}
 	}
 	
-
+	//build button pressed
+	if( _my<_ui.y_size_ui-12 && _my>_ui.y_size_ui-_ui.sprite_size+12 && _mx>_ui.x_size_ui/2+_ui.sprite_size && _mx<_ui.x_size_ui/2+(_ui.sprite_size*2)){
+		if (_ui.ui_build_selected){
+			_ui.ui_build_selected=false;
+		}else{
+			_ui.ui_build_selected=true;
+		}
+	}
 	
 	if (mouse_check_button_pressed(mb_right)){
 		_ui.ui_gather_selected=false;
@@ -36,4 +46,24 @@ function scr_ui_control(){
 			global.pop += 1;
 		}
 	}
+	
+	//build house_button
+	if (mouse_check_button_pressed(mb_left) && _ui.ui_build_selected){
+		if (_ui.obj_to_build_sel){
+			instance_create_layer(mouse_x,mouse_y,"Terrain",obj_house_lvl_0);
+			_ui.obj_to_build_sel=false;
+			_ui.build_obj=noone;
+			global.resources_gather -=5;
+		}else{
+			if (global.resources_gather >=5){
+				if (_my>200-15 && _my<200+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
+					_ui.obj_to_build_sel=true;
+					_ui.build_obj=spr_house_lvl0;
+				}
+			}else{
+				_ui._text_warning="Need 5 resource to build House"
+				_ui._show_warning=true;
+			}
+		}
+	}	
 }

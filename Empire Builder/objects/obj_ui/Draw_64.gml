@@ -18,6 +18,14 @@ if (ui_gather_selected){
 	draw_sprite_ext(spr_ui_select,0,x_size_ui/2,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
 }
 
+//Draw ui interact buttons
+draw_set_color(c_white);
+draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+sprite_size,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
+draw_sprite_ext(spr_ui_build,0,x_size_ui/2+sprite_size+5,y_size_ui-(sprite_size/2),0.8,0.8,0,c_white,1);
+if (ui_build_selected){
+	draw_sprite_ext(spr_ui_select,0,x_size_ui/2+sprite_size,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
+}
+
 //Draw pop info
 	draw_set_color(c_white);
 	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2-sprite_size*1.5,sprite_size/2-10,1.5,1,0,c_white,1);
@@ -53,4 +61,16 @@ if (_show_base_menu){
 	draw_sprite_ext(spr_ui_button_black_background,0,0,y_size_ui/2,1.5,1,0,c_white,1);
 	draw_sprite_ext(spr_ui_population,0,sprite_size/2,y_size_ui/2,0.5,0.5,0,c_white,1);
 	draw_text(55,y_size_ui/2-7,"+ 1")
+}
+
+//show build menu
+if (ui_build_selected){
+	draw_set_color(c_white);
+	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,200,2.7,1,0,c_white,1);
+	draw_sprite_ext(spr_house_lvl0,0,x_size_ui-(sprite_size*2),200,0.5,0.5,0,c_white,1);
+	draw_text(x_size_ui-sprite_size-35,200-7,"house lvl 0")
+}
+
+if (obj_to_build_sel){
+	draw_sprite_ext(build_obj,0,device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),1,1,0,c_white,0.5);
 }

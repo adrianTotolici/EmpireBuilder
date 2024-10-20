@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_base_lvl0",
+  "%Name":"obj_base_lvl_0",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_base_lvl0",
+  "name":"obj_base_lvl_0",
   "overriddenProperties":[],
   "parent":{
     "name":"main_base",
     "path":"folders/Objects/buildings/main_base.yy",
   },
   "parentObjectId":{
-    "name":"obj_par_main_base",
-    "path":"objects/obj_par_main_base/obj_par_main_base.yy",
+    "name":"obj_par_buildings",
+    "path":"objects/obj_par_buildings/obj_par_buildings.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

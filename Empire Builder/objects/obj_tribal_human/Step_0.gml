@@ -12,7 +12,7 @@ if (point_distance(x, y, target_x, target_y) < speed) {
 	speed = 0;
 	instance_destroy();
 	var _resources = instance_position(target_x, target_y-10, obj_par_resources);
-	var _base = instance_position(target_x,target_y-10,obj_base_lvl0);
+	var _base = instance_position(target_x,target_y-10,obj_base_lvl_0);
 	if (instance_exists(_resources)){
 		_resources.ocupied=true;
 	}

@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_populate_map(_sprite_size){
-	instance_create_layer(x, y, "Terrain", obj_base_lvl0);
+	instance_create_layer(x, y, "Terrain", obj_base_lvl_0);
 	
 	for (i=2;i<array_length(global.terrain_resource_matrix)-2;i++){
 		for (j=2;j<array_length(global.terrain_resource_matrix[i])-2;j++){
