@@ -3,4 +3,5 @@
 
 // Inherit the parent event
 event_inherited();
-
+living_space = 4;
+global.house +=living_space;

@@ -94,6 +94,7 @@
     {"id":{"name":"spr_ui_food","path":"sprites/spr_ui_food/spr_ui_food.yy",},},
     {"id":{"name":"spr_ui_game_titile","path":"sprites/spr_ui_game_titile/spr_ui_game_titile.yy",},},
     {"id":{"name":"spr_ui_gather","path":"sprites/spr_ui_gather/spr_ui_gather.yy",},},
+    {"id":{"name":"spr_ui_house","path":"sprites/spr_ui_house/spr_ui_house.yy",},},
     {"id":{"name":"spr_ui_materials","path":"sprites/spr_ui_materials/spr_ui_materials.yy",},},
     {"id":{"name":"spr_ui_population","path":"sprites/spr_ui_population/spr_ui_population.yy",},},
     {"id":{"name":"spr_ui_select","path":"sprites/spr_ui_select/spr_ui_select.yy",},},

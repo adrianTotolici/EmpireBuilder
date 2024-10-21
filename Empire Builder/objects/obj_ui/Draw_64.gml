@@ -27,27 +27,29 @@ if (ui_build_selected){
 }
 
 //Draw pop info
-	draw_set_color(c_white);
-	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2-sprite_size*1.5,sprite_size/2-10,1.5,1,0,c_white,1);
-	draw_sprite_ext(spr_ui_population,0,x_size_ui/2-75,20,0.5,0.5,0,c_white,1);
-	draw_text(x_size_ui/2-45,12,string(floor(global.pop_used))+"/"+string(floor(global.pop)));
+draw_set_color(c_white);
+draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2-sprite_size*1.5,sprite_size/2-10,1.5,1,0,c_white,1);
+draw_sprite_ext(spr_ui_population,0,x_size_ui/2-75,20,0.5,0.5,0,c_white,1);
+draw_text(x_size_ui/2-45,12,string(floor(global.pop_used))+"/"+string(floor(global.pop)));
 
 // Draw food info
-if (global.food_gather>=1){
-	draw_set_color(c_white);
-	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2,sprite_size/2-10,1.5,1,0,c_white,1);
-	draw_sprite_ext(spr_ui_food,0,x_size_ui/2+25,20,0.5,0.5,0,c_white,1);
-	draw_text(x_size_ui/2+64,12,string(floor(global.food_gather)));
-}
+draw_set_color(c_white);
+draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2,sprite_size/2-10,1.5,1,0,c_white,1);
+draw_sprite_ext(spr_ui_house,0,x_size_ui/2+25,20,0.5,0.5,0,c_white,1);
+draw_text(x_size_ui/2+64,12,string(floor(global.house)));
 
 
 // Draw resources info
-if (global.resources_gather>=1){
-	draw_set_color(c_white);
-	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+100,sprite_size/2-10,1.5,1,0,c_white,1);
-	draw_sprite_ext(spr_ui_materials,0,x_size_ui/2+130,5,0.8,0.8,0,c_white,1);
-	draw_text(x_size_ui/2+164,12,string(floor(global.resources_gather)));
-}
+draw_set_color(c_white);
+draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+100,sprite_size/2-10,1.5,1,0,c_white,1);
+draw_sprite_ext(spr_ui_food,0,x_size_ui/2+130,20,0.5,0.5,0,c_white,1);
+draw_text(x_size_ui/2+164,12,string(floor(global.food_gather)));
+
+// Draw resources info
+draw_set_color(c_white);
+draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+200,sprite_size/2-10,1.5,1,0,c_white,1);
+draw_sprite_ext(spr_ui_materials,0,x_size_ui/2+230,5,0.8,0.8,0,c_white,1);
+draw_text(x_size_ui/2+264,12,string(floor(global.resources_gather)));
 	
 //Show warning
 	if (_show_warning) {
