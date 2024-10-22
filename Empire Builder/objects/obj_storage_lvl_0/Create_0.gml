@@ -3,7 +3,5 @@
 
 // Inherit the parent event
 event_inherited();
-living_space = 4;
-storage_space = 50;
-global.house +=living_space;
-global.storage_space += 10;
+storage_space = 400;
+global.storage_space +=storage_space;

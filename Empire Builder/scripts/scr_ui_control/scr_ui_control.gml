@@ -9,6 +9,7 @@ function scr_ui_control(){
 	
 	//house lvl 0 5 resoures
 	var _house_lvl_0_price=5;
+	var _storage_lvl_0_price=15;
 	
 	//press exit main menu button
 	if (mouse_check_button_pressed(mb_left) && _my>=12 && _my<=_ui.sprite_size-12 && _mx>=_ui.x_size_ui-(_ui.sprite_size*_ui.ui_button_scale) && _mx<=_ui.x_size_ui){
@@ -61,7 +62,7 @@ function scr_ui_control(){
 	//build house_button
 	if (mouse_check_button_pressed(mb_left) && _ui.ui_build_selected){
 		if (_ui.obj_to_build_sel){
-			instance_create_layer(mouse_x,mouse_y,"Terrain",obj_house_lvl_0);
+			instance_create_layer(mouse_x,mouse_y,"Terrain",_ui.build_obj);
 			_ui.obj_to_build_sel=false;
 			_ui.build_obj=noone;
 			global.resources_gather -=_house_lvl_0_price;
@@ -69,9 +70,19 @@ function scr_ui_control(){
 			if (_my>200-15 && _my<200+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
 				if (global.resources_gather >=_house_lvl_0_price){
 					_ui.obj_to_build_sel=true;
-					_ui.build_obj=spr_house_lvl0;
+					_ui.build_obj=obj_house_lvl_0;
 				}else{
 					_ui._text_warning="Need "+string(_house_lvl_0_price)+" resource to build House";
+					_ui._show_warning=true;
+				}
+			}
+			
+			if (_my>240-15 && _my<240+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
+				if (global.resources_gather >=_storage_lvl_0_price){
+					_ui.obj_to_build_sel=true;
+					_ui.build_obj=obj_storage_lvl_0;
+				}else{
+					_ui._text_warning="Need "+string(_storage_lvl_0_price)+" resource to build a storage";
 					_ui._show_warning=true;
 				}
 			}
