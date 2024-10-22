@@ -4,8 +4,11 @@ function scr_ui_control(){
 	var _ui=obj_ui;
 	
 	//prices
-	//human 10 food;
+	//human 10 food
 	var _human_price=10;
+	
+	//house lvl 0 5 resoures
+	var _house_lvl_0_price=5;
 	
 	//press exit main menu button
 	if (mouse_check_button_pressed(mb_left) && _my>=12 && _my<=_ui.sprite_size-12 && _mx>=_ui.x_size_ui-(_ui.sprite_size*_ui.ui_button_scale) && _mx<=_ui.x_size_ui){
@@ -41,9 +44,17 @@ function scr_ui_control(){
 
 	// build human menu button
 	if (mouse_check_button_pressed(mb_left) && _my>y_size_ui/2-15 && _my<y_size_ui/2+20 && _mx>0 && _mx<sprite_size*1.5-10 && _ui._show_base_menu){
-		if (global.food_gather>=_human_price){
-			global.food_gather -=_human_price;
-			global.pop += 1;
+		if (global.house >= global.pop+1){
+			if (global.food_gather>=_human_price){
+				global.food_gather -=_human_price;
+				global.pop += 1;
+			}else{
+				_ui._text_warning="Need "+string(_human_price)+" more food";
+				_ui._show_warning=true;
+			}
+		}else{
+			_ui._text_warning="Need more houses";
+			_ui._show_warning=true;
 		}
 	}
 	
@@ -53,16 +64,16 @@ function scr_ui_control(){
 			instance_create_layer(mouse_x,mouse_y,"Terrain",obj_house_lvl_0);
 			_ui.obj_to_build_sel=false;
 			_ui.build_obj=noone;
-			global.resources_gather -=5;
+			global.resources_gather -=_house_lvl_0_price;
 		}else{
-			if (global.resources_gather >=5){
-				if (_my>200-15 && _my<200+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
+			if (_my>200-15 && _my<200+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
+				if (global.resources_gather >=_house_lvl_0_price){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=spr_house_lvl0;
+				}else{
+					_ui._text_warning="Need "+string(_house_lvl_0_price)+" resource to build House";
+					_ui._show_warning=true;
 				}
-			}else{
-				_ui._text_warning="Need 5 resource to build House"
-				_ui._show_warning=true;
 			}
 		}
 	}	
