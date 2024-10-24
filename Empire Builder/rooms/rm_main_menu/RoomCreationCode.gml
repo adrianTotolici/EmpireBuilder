@@ -1,4 +1,4 @@
-global.full_screen=true;
+global.full_screen=false;
 
 if (global.full_screen) {
 	// Enable borderless fullscreen
