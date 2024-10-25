@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_grass_bush",
+  "%Name":"obj_clay_mine",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,7 +8,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_grass_bush",
+  "name":"obj_clay_mine",
   "overriddenProperties":[],
   "parent":{
     "name":"construction",
@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_grass",
-    "path":"sprites/spr_grass/spr_grass.yy",
+    "name":"spr_clay_mine",
+    "path":"sprites/spr_clay_mine/spr_clay_mine.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -15,6 +15,10 @@ function scr_populate_map(_sprite_size){
 					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_grass_bush);
 					global.terrain_resource_matrix[i][j] = true;
 				}
+				if (resource_freq>20 && resource_freq<=21){
+					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_clay_mine);
+					global.terrain_resource_matrix[i][j] = true;
+				}
 			}
 		}
 	}
