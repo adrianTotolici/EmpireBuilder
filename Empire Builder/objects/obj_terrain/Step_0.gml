@@ -1,11 +1,6 @@
 /// @description Insert description here
-// You can write your code in this editor
 if (!alarm_started){
-	var _food_eaten=global.pop*1;
-	var _total_food = 0;
-	for (var _i=0; _i<array_length(global.food_keys); _i++){
-		_total_food += ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
-	}
+	var _food_eaten=global.pop*0.2;
 	for (var _i=0; _i<array_length(global.food_keys); _i++){
 		if (_food_eaten <= ds_map_find_value(global.resources_gather_map, global.food_keys[_i])){
 			global.resources_gather_map[? global.food_keys[_i]] = ds_map_find_value(global.resources_gather_map, global.food_keys[_i]) - _food_eaten;

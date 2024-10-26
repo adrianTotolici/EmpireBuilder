@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_init_recepies",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_init_recepies",
+  "parent":{
+    "name":"game_play",
+    "path":"folders/Scripts/game_play.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -4,13 +4,25 @@ function scr_ui_control(){
 	var _ui=obj_ui;
 	
 	//prices
-	//human 10 food
+	
+	//********************************************
+	//** CREATURE **             PRICE          **
+	//********************************************
+	//********************************************
+	//**  HUMAN   **          10 food           **
+	//********************************************
+	
+	//**********************************************
+	//**  BUILDINGS      **         PRICE         **
+	//**********************************************
+	//**********************************************
+	//**  House lvl 0    **       5 grass         **
+	//**********************************************
+	//**  Storage lvl 0  **  10 grass ; 5 clay    **
+	//**********************************************
+		
 	var _human_price=10;
-	
-	//house lvl 0 5 resoures
-	var _house_lvl_0_price=5;
-	var _storage_lvl_0_price=15;
-	
+
 	//press exit main menu button
 	if (mouse_check_button_pressed(mb_left) && _my>=12 && _my<=_ui.sprite_size-12 && _mx>=_ui.x_size_ui-(_ui.sprite_size*_ui.ui_button_scale) && _mx<=_ui.x_size_ui){
 		game_restart();
@@ -72,33 +84,69 @@ function scr_ui_control(){
 		}
 	}
 	
-	//build house_button
+	//build
 	if (mouse_check_button_pressed(mb_left) && _ui.ui_build_selected){
 		if (_ui.obj_to_build_sel){
 			instance_create_layer(mouse_x,mouse_y,"Terrain",_ui.build_obj);
+			_materials=scr_init_recepies(_ui.build_obj);
 			_ui.obj_to_build_sel=false;
 			_ui.build_obj=noone;
-			global.resources_gather -=_house_lvl_0_price;
+			var _keys = ds_map_keys_to_array(_materials);
+			for (var i = 0; i < array_length(_keys); i++) {
+				var value = ds_map_find_value(_materials, _keys[i]);
+				global.resources_gather_map[? _keys[i]] = ds_map_find_value(global.resources_gather_map, _keys[i]) - value;
+			}	
 		}else{
 			if (_my>200-15 && _my<200+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
-				if (global.resources_gather >=_house_lvl_0_price){
+				if (check_material_available(obj_house_lvl_0)){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_house_lvl_0;
 				}else{
-					_ui._text_warning="Need "+string(_house_lvl_0_price)+" resource to build House";
+					_ui._text_warning="Need resource to build House";
 					_ui._show_warning=true;
 				}
 			}
 			
 			if (_my>240-15 && _my<240+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
-				if (global.resources_gather >=_storage_lvl_0_price){
+				if (check_material_available(obj_storage_lvl_0)){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_storage_lvl_0;
 				}else{
-					_ui._text_warning="Need "+string(_storage_lvl_0_price)+" resource to build a storage";
+					_ui._text_warning="Need resource to build a storage";
 					_ui._show_warning=true;
 				}
 			}
 		}
-	}	
+	}
+	
+	//show food inventory
+	if (mouse_check_button_pressed(mb_left) && _mx>x_size_ui/2+100 && _mx<x_size_ui/2+195 && _my>0 && _my<sprite_size/2+10){
+		if (_ui.show_food_invetory){
+			_ui.show_food_invetory=false;
+		}else{
+			_ui.show_food_invetory=true;
+		}
+	}
+	if (mouse_check_button_pressed(mb_left) && _mx>x_size_ui/2+230 && _mx<x_size_ui/2+325 && _my>0 && _my<sprite_size/2+10){
+		if (_ui.show_material_inventory){
+			_ui.show_material_inventory=false;
+		}else{
+			_ui.show_material_inventory=true;
+		}
+	}
+}
+
+function check_material_available(_build_obj){
+	_materials=scr_init_recepies(_build_obj)
+	_materials_own = true;
+	var _keys = ds_map_keys_to_array(_materials);
+	for (var i = 0; i < array_length(_keys); i++) {
+		var value_need = ds_map_find_value(_materials, _keys[i]);
+		var value_own = ds_map_find_value(global.resources_gather_map, _keys[i]);
+		if (value_need > value_own){
+			_materials_own  = false;
+			break;
+		}
+	}
+	return _materials_own;
 }

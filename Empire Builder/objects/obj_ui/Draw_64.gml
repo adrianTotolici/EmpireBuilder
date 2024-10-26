@@ -32,28 +32,23 @@ draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2-sprite_size*1.5,spr
 draw_sprite_ext(spr_ui_population,0,x_size_ui/2-75,20,0.5,0.5,0,c_white,1);
 draw_text(x_size_ui/2-45,12,string(floor(global.pop_used))+"/"+string(floor(global.pop)));
 
-// Draw food info
+// Draw building info
 draw_set_color(c_white);
 draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2,sprite_size/2-10,1.5,1,0,c_white,1);
 draw_sprite_ext(spr_ui_house,0,x_size_ui/2+25,20,0.5,0.5,0,c_white,1);
 draw_text(x_size_ui/2+64,12,string(floor(global.house)));
 
-
-// Draw resources info
+// Draw food info
 draw_set_color(c_white);
 draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+100,sprite_size/2-10,1.5,1,0,c_white,1);
 draw_sprite_ext(spr_ui_food,0,x_size_ui/2+130,20,0.5,0.5,0,c_white,1);
-var _total_food = 0;
-for (var _i=0; _i<array_length(global.food_keys); _i++){
-	_total_food += ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
-}
 draw_text(x_size_ui/2+164,12,string(floor(_total_food)));
 
 // Draw resources info
 draw_set_color(c_white);
 draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+200,sprite_size/2-10,2,1,0,c_white,1);
 draw_sprite_ext(spr_ui_materials,0,x_size_ui/2+230,5,0.8,0.8,0,c_white,1);
-draw_text(x_size_ui/2+264,12,string(floor(global.resources_gather))+"/"+string(floor(global.storage_space)));
+draw_text(x_size_ui/2+264,12,string(floor(_total_resources))+"/"+string(floor(global.storage_space)));
 	
 //Show warning
 	if (_show_warning) {
@@ -83,4 +78,22 @@ if (ui_build_selected){
 
 if (obj_to_build_sel){
 	draw_sprite_ext(object_get_sprite(build_obj),0,device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),1,1,0,c_white,0.5);
+}
+
+if (show_food_invetory){
+	draw_set_color(c_white);
+	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+100,sprite_size/2+32,1.5,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_berry,0,x_size_ui/2+120,sprite_size/2+45,0.8,0.8,0,c_white,1);
+	draw_text(x_size_ui/2+150,sprite_size/2+20,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[0]))));
+}
+
+if (show_material_inventory){
+	draw_set_color(c_white);
+	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+200,sprite_size/2+32,2,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_grass,0,x_size_ui/2+230,sprite_size/2+45,0.8,0.8,0,c_white,1);
+	draw_text(x_size_ui/2+270,sprite_size/2+20,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[0]))));
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+200,sprite_size+45,2,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_clay,0,x_size_ui/2+230,sprite_size+55,0.8,0.8,0,c_white,1);
+	draw_text(x_size_ui/2+270,sprite_size+35,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[1]))));
 }

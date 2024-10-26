@@ -34,3 +34,12 @@ if (mouse_check_button_pressed(mb_right)){
 		ui_gather_selected=false;
 	}
 }
+_total_food = 0
+for (var _i=0; _i<array_length(global.food_keys); _i++){
+	_total_food += ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
+}
+
+_total_resources=0;
+for (var _i=0; _i<array_length(global.resources_keys); _i++){
+	_total_resources += ds_map_find_value(global.resources_gather_map, global.resources_keys[_i]);
+}
