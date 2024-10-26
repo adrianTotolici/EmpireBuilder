@@ -46,8 +46,21 @@ function scr_ui_control(){
 	// build human menu button
 	if (mouse_check_button_pressed(mb_left) && _my>y_size_ui/2-15 && _my<y_size_ui/2+20 && _mx>0 && _mx<sprite_size*1.5-10 && _ui._show_base_menu){
 		if (global.house >= global.pop+1){
-			if (global.food_gather>=_human_price){
-				global.food_gather -=_human_price;
+			var _total_food = 0;
+			for (var _i=0; _i<array_length(global.food_keys); _i++){
+				_total_food += ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
+			}
+			if (_total_food>=_human_price){
+				_food_to_pay=_human_price;
+				for (var _i=0; _i<array_length(global.food_keys); _i++){
+					if (_food_to_pay <= ds_map_find_value(global.resources_gather_map, global.food_keys[_i])){
+						global.resources_gather_map[? global.food_keys[_i]] = ds_map_find_value(global.resources_gather_map, global.food_keys[_i]) - _food_to_pay;
+						break;
+					}else{		
+						_food_to_pay -= ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
+						global.resources_gather_map[? global.food_keys[_i]] = 0;
+					}
+				}
 				global.pop += 1;
 			}else{
 				_ui._text_warning="Need "+string(_human_price)+" more food";

@@ -43,7 +43,11 @@ draw_text(x_size_ui/2+64,12,string(floor(global.house)));
 draw_set_color(c_white);
 draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+100,sprite_size/2-10,1.5,1,0,c_white,1);
 draw_sprite_ext(spr_ui_food,0,x_size_ui/2+130,20,0.5,0.5,0,c_white,1);
-draw_text(x_size_ui/2+164,12,string(floor(global.food_gather)));
+var _total_food = 0;
+for (var _i=0; _i<array_length(global.food_keys); _i++){
+	_total_food += ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
+}
+draw_text(x_size_ui/2+164,12,string(floor(_total_food)));
 
 // Draw resources info
 draw_set_color(c_white);
