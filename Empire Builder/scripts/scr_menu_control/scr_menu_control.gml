@@ -18,11 +18,11 @@ function init_values(){
 		global.food_keys=["berry"];
 		global.resources_keys=["grass","clay"];
 		global.resources_gather_map =ds_map_create();
-		ds_map_add(global.resources_gather_map, global.food_keys[0], 15);
+		ds_map_add(global.resources_gather_map, global.food_keys[0], 1);
 		ds_map_add(global.resources_gather_map, global.resources_keys[0], 30);
 		ds_map_add(global.resources_gather_map, global.resources_keys[1], 2);
 		
-		global.pop=5;
+		global.pop=1;
 		global.pop_used=0;
 		global.terrain_resource_matrix= [];
 		global.house=0;

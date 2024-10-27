@@ -92,9 +92,9 @@ function scr_ui_control(){
 			_ui.obj_to_build_sel=false;
 			_ui.build_obj=noone;
 			var _keys = ds_map_keys_to_array(_materials);
-			for (var i = 0; i < array_length(_keys); i++) {
-				var value = ds_map_find_value(_materials, _keys[i]);
-				global.resources_gather_map[? _keys[i]] = ds_map_find_value(global.resources_gather_map, _keys[i]) - value;
+			for (var _i = 0; _i < array_length(_keys); _i++) {
+				var _value = ds_map_find_value(_materials, _keys[_i]);
+				global.resources_gather_map[? _keys[_i]] = ds_map_find_value(global.resources_gather_map, _keys[_i]) - _value;
 			}	
 		}else{
 			if (_my>200-15 && _my<200+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
@@ -140,10 +140,10 @@ function check_material_available(_build_obj){
 	_materials=scr_init_recepies(_build_obj)
 	_materials_own = true;
 	var _keys = ds_map_keys_to_array(_materials);
-	for (var i = 0; i < array_length(_keys); i++) {
-		var value_need = ds_map_find_value(_materials, _keys[i]);
-		var value_own = ds_map_find_value(global.resources_gather_map, _keys[i]);
-		if (value_need > value_own){
+	for (var _i = 0; _i < array_length(_keys); _i++) {
+		var _value_need = ds_map_find_value(_materials, _keys[_i]);
+		var _value_own = ds_map_find_value(global.resources_gather_map, _keys[_i]);
+		if (_value_need > _value_own){
 			_materials_own  = false;
 			break;
 		}
