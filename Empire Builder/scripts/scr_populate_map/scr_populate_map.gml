@@ -23,6 +23,10 @@ function scr_populate_map(_sprite_size){
 					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_fish_pond);
 					global.terrain_resource_matrix[i][j] = true;
 				}
+				if (resource_freq>40 && resource_freq<=41){
+					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_stone_quarry);
+					global.terrain_resource_matrix[i][j] = true;
+				}
 			}
 		}
 	}
