@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_pound",
-    "path":"sprites/spr_pound/spr_pound.yy",
+    "name":"spr_fish_pound",
+    "path":"sprites/spr_fish_pound/spr_fish_pound.yy",
   },
   "spriteMaskId":null,
   "visible":true,

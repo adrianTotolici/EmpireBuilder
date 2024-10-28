@@ -85,6 +85,10 @@ if (show_food_invetory){
 	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+100,sprite_size/2+32,1.5,1,0,c_white,1);
 	draw_sprite_ext(spr_ui_berry,0,x_size_ui/2+120,sprite_size/2+45,0.8,0.8,0,c_white,1);
 	draw_text(x_size_ui/2+150,sprite_size/2+20,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[0]))));
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+100,sprite_size+45,1.5,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_fish,0,x_size_ui/2+120,sprite_size+55,0.8,0.8,0,c_white,1);
+	draw_text(x_size_ui/2+150,sprite_size+35,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[1]))));
 }
 
 if (show_material_inventory){
