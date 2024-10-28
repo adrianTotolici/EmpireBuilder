@@ -72,8 +72,12 @@ if (ui_build_selected){
 	draw_text(x_size_ui-sprite_size-35,200-7,"house lvl 0")
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,240,2.7,1,0,c_white,1);
-	draw_sprite_ext(spr_storage_lvl0,0,x_size_ui-(sprite_size*2),250,0.5,0.5,0,c_white,1);
+	draw_sprite_ext(spr_storage_lvl0,0,x_size_ui-(sprite_size*2),232,0.5,0.5,0,c_white,1);
 	draw_text(x_size_ui-sprite_size-35,240-7,"storage lvl 0")
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,280,2.7,1,0,c_white,1);
+	draw_sprite_ext(spr_house_lvl1,0,x_size_ui-(sprite_size*2),278,0.5,0.5,0,c_white,1);
+	draw_text(x_size_ui-sprite_size-35,280-7,"house lvl 1")
 }
 
 if (obj_to_build_sel){

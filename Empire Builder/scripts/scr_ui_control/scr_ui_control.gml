@@ -20,6 +20,8 @@ function scr_ui_control(){
 	//**********************************************
 	//**  Storage lvl 0  **  10 grass ; 5 clay    **
 	//**********************************************
+	//**  House lvl 1    **  15 grass ; 25 clay   **
+	//**********************************************
 		
 	var _human_price=10;
 
@@ -113,6 +115,15 @@ function scr_ui_control(){
 					_ui.build_obj=obj_storage_lvl_0;
 				}else{
 					_ui._text_warning="Need resource to build a storage";
+					_ui._show_warning=true;
+				}
+			}
+			if (_my>280-15 && _my<280+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
+				if (check_material_available(obj_house_lvl_1)){
+					_ui.obj_to_build_sel=true;
+					_ui.build_obj=obj_house_lvl_1;
+				}else{
+					_ui._text_warning="Need resource to build a level 1 house";
 					_ui._show_warning=true;
 				}
 			}
