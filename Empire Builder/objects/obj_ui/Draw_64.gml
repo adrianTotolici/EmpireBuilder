@@ -100,4 +100,8 @@ if (show_material_inventory){
 	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+200,sprite_size+45,2,1,0,c_white,1);
 	draw_sprite_ext(spr_ui_clay,0,x_size_ui/2+230,sprite_size+55,0.8,0.8,0,c_white,1);
 	draw_text(x_size_ui/2+270,sprite_size+35,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[1]))));
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+200,sprite_size+90,2,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_stone,0,x_size_ui/2+230,sprite_size+97,0.8,0.8,0,c_white,1);
+	draw_text(x_size_ui/2+270,sprite_size+82,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[2]))));
 }

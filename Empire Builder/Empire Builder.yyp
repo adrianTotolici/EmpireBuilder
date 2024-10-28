@@ -115,6 +115,7 @@
     {"id":{"name":"spr_ui_materials","path":"sprites/spr_ui_materials/spr_ui_materials.yy",},},
     {"id":{"name":"spr_ui_population","path":"sprites/spr_ui_population/spr_ui_population.yy",},},
     {"id":{"name":"spr_ui_select","path":"sprites/spr_ui_select/spr_ui_select.yy",},},
+    {"id":{"name":"spr_ui_stone","path":"sprites/spr_ui_stone/spr_ui_stone.yy",},},
     {"id":{"name":"ts_terrain","path":"tilesets/ts_terrain/ts_terrain.yy",},},
   ],
   "resourceType":"GMProject",
