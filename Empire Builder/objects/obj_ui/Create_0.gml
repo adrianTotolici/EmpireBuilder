@@ -14,7 +14,7 @@ _total_food = 0;
 _total_resources = 0;
 
 display_set_gui_size(x_size_ui,y_size_ui);
-_text_to_display = "Empire Building V0.2";
+_text_to_display = "Empire Building V0.3";
 _text_menu_button = "Menu";
 _text_warning = "";
 
