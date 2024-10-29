@@ -10,8 +10,10 @@ start_alarm=false;
 _show_base_menu=false;
 show_food_invetory=false;
 show_material_inventory=false;
+show_tools_inventory=false;
 _total_food = 0;
 _total_resources = 0;
+_total_tools = 0;
 
 display_set_gui_size(x_size_ui,y_size_ui);
 _text_to_display = "Empire Building V0.3";

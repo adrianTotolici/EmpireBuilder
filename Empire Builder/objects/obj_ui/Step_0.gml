@@ -43,3 +43,8 @@ _total_resources=0;
 for (var _i=0; _i<array_length(global.resources_keys); _i++){
 	_total_resources += ds_map_find_value(global.resources_gather_map, global.resources_keys[_i]);
 }
+
+_total_tools=0;
+for (var _i=0; _i<array_length(global.tool_keys); _i++){
+	_total_tools += ds_map_find_value(global.resources_gather_map, global.tool_keys[_i]);
+}

@@ -2,6 +2,7 @@ function scr_ui_control(){
 	var _mx=device_mouse_x_to_gui(0);
 	var _my=device_mouse_y_to_gui(0);
 	var _ui=obj_ui;
+	var _x_start_pos=x_size_ui/2-196;
 	
 	//prices
 	
@@ -131,18 +132,27 @@ function scr_ui_control(){
 	}
 	
 	//show food inventory
-	if (mouse_check_button_pressed(mb_left) && _mx>x_size_ui/2+100 && _mx<x_size_ui/2+195 && _my>0 && _my<sprite_size/2+10){
+	if (mouse_check_button_pressed(mb_left) && _mx>_x_start_pos+100 && _mx<_x_start_pos+195 && _my>0 && _my<sprite_size/2+10){
 		if (_ui.show_food_invetory){
 			_ui.show_food_invetory=false;
 		}else{
 			_ui.show_food_invetory=true;
 		}
 	}
-	if (mouse_check_button_pressed(mb_left) && _mx>x_size_ui/2+230 && _mx<x_size_ui/2+325 && _my>0 && _my<sprite_size/2+10){
+	// show materials inventory
+	if (mouse_check_button_pressed(mb_left) && _mx>_x_start_pos+195 && _mx<_x_start_pos+325 && _my>0 && _my<sprite_size/2+10){
 		if (_ui.show_material_inventory){
 			_ui.show_material_inventory=false;
 		}else{
 			_ui.show_material_inventory=true;
+		}
+	}
+	// show tools inventory
+	if (mouse_check_button_pressed(mb_left) && _mx>_x_start_pos+325 && _mx<_x_start_pos+455 && _my>0 && _my<sprite_size/2+10){
+		if (_ui.show_tools_inventory){
+			_ui.show_tools_inventory=false;
+		}else{
+			_ui.show_tools_inventory=true;
 		}
 	}
 }
