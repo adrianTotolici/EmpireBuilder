@@ -17,12 +17,18 @@ function scr_menu_control(){
 function init_values(){
 		global.food_keys=["berry","fish"];
 		global.resources_keys=["grass","clay","stone"];
+		global.tool_keys=["pickaxe"];
 		global.resources_gather_map =ds_map_create();
+		
+		//food
 		ds_map_add(global.resources_gather_map, global.food_keys[0], 10);
 		ds_map_add(global.resources_gather_map, global.food_keys[1], 50);
+		//materials
 		ds_map_add(global.resources_gather_map, global.resources_keys[0], 50);
 		ds_map_add(global.resources_gather_map, global.resources_keys[1], 50);
 		ds_map_add(global.resources_gather_map, global.resources_keys[2], 50);
+		//tools
+		ds_map_add(global.resources_gather_map, global.tool_keys[0], 1);
 		
 		global.pop=4;
 		global.pop_used=0;

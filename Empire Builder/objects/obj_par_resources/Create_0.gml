@@ -6,3 +6,4 @@ time_loop=true;
 spr_ocuppied=noone;
 spr_unocuppied=noone;
 gather_loop=0;
+tool_to_use=noone;
