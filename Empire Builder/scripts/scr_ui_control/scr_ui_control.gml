@@ -105,7 +105,7 @@ function scr_ui_control(){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_house_lvl_0;
 				}else{
-					_ui._text_warning="Need resource to build House";
+					_ui._text_warning="Need resource to build a straw House";
 					_ui._show_warning=true;
 				}
 			}
@@ -124,7 +124,16 @@ function scr_ui_control(){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_house_lvl_1;
 				}else{
-					_ui._text_warning="Need resource to build a level 1 house";
+					_ui._text_warning="Need resource to build a mud house";
+					_ui._show_warning=true;
+				}
+			}
+			if (_my>320-15 && _my<320+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
+				if (check_material_available(obj_tool_maker_lvl_0)){
+					_ui.obj_to_build_sel=true;
+					_ui.build_obj=obj_tool_maker_lvl_0;
+				}else{
+					_ui._text_warning="Need resource to build a tool maker.";
 					_ui._show_warning=true;
 				}
 			}
