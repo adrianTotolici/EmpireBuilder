@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tribal_human",
+  "%Name":"obj_tribal_human_hostile",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_tribal_human",
+  "name":"obj_tribal_human_hostile",
   "overriddenProperties":[],
   "parent":{
     "name":"humans",
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_human_move_side_blue",
-    "path":"sprites/spr_human_move_side_blue/spr_human_move_side_blue.yy",
+    "name":"spr_human_stand_red",
+    "path":"sprites/spr_human_stand_red/spr_human_stand_red.yy",
   },
   "spriteMaskId":null,
   "visible":true,

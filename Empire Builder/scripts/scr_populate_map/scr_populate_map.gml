@@ -30,4 +30,11 @@ function scr_populate_map(_sprite_size){
 			}
 		}
 	}
+	
+	nr_of_hostiles=random_range(20,150);
+	for (i=1; i<=nr_of_hostiles; i++){
+		xpos=random_range(0,room_width);
+		ypos=random_range(0,room_height);
+		instance_create_layer(xpos, ypos, "Terrain", obj_tribal_human_hostile);
+	}
 }
