@@ -39,8 +39,8 @@ function scr_ui_control(){
 			if (global.pop-global.pop_used >0){
 				_ui.ui_gather_selected=true;
 			}else{
-				_ui._text_warning="No more population"
-				_ui._show_warning=true;			
+				_ui._text_warning="No more available population"
+				_ui._show_warning=true;	
 			}
 		}
 	}
@@ -84,6 +84,28 @@ function scr_ui_control(){
 		}else{
 			_ui._text_warning="Need more houses";
 			_ui._show_warning=true;
+		}
+	}
+	
+	// build tool menu button
+	if (_ui._show_tools_menu){
+		if (mouse_check_button_pressed(mb_left) && _my>y_size_ui/2-15 && _my<y_size_ui/2+20 && _mx>0 && _mx<sprite_size*1.5-10){
+			if (global.storage_space >= _ui._total_resources+1){
+				if (check_material_available(obj_pickaxe_lvl_0)){
+					var _keys = ds_map_keys_to_array(_materials);
+					for (var _i = 0; _i < array_length(_keys); _i++) {
+						var _value = ds_map_find_value(_materials, _keys[_i]);
+						global.resources_gather_map[? _keys[_i]] = ds_map_find_value(global.resources_gather_map, _keys[_i]) - _value;
+					}	
+					global.resources_gather_map[? global.tool_keys[0]] += 1;
+				}else{
+					_ui._text_warning="Need more materials to build pickaxe";
+					_ui._show_warning=true;
+				}
+			}else{
+				_ui._text_warning="Need more storage space";
+				_ui._show_warning=true;
+			}
 		}
 	}
 	

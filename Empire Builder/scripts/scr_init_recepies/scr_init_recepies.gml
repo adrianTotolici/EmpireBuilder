@@ -22,6 +22,9 @@ function scr_init_recepies(_object){
 			ds_map_add(materials, global.resources_keys[0], 10);
 			ds_map_add(materials, global.resources_keys[1], 15);
 			return materials;
+		case obj_pickaxe_lvl_0:
+			ds_map_add(materials, global.resources_keys[2], 5);
+			return materials;
 		default:
 			return materials;
 	}

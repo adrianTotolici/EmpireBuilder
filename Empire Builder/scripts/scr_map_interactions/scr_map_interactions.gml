@@ -1,7 +1,9 @@
 function scr_map_interactions(_mx, _my){
 	var _ui=obj_ui;
 	var _resources = instance_position(_mx, _my, obj_par_resources);
-	var _buildings = instance_position(_mx, _my, obj_base_lvl_0);
+	var _buildings_base = instance_position(_mx, _my, obj_base_lvl_0);
+	var _buildings_tools = instance_position(_mx, _my, obj_tool_maker_lvl_0);
+	
 
 	if (instance_exists(_resources)){
 		var _tools_available = ds_map_find_value(global.resources_gather_map, _resources.tool_to_use);
@@ -15,10 +17,11 @@ function scr_map_interactions(_mx, _my){
 					human.human_created=true;
 					_resources.harvested=true;
 					global.pop_used += 1;
-					_ui.ui_gather_selected=false;
 					if (_tools_available > 0){
 						global.resources_gather_map[? _resources.tool_to_use] = ds_map_find_value(global.resources_gather_map, _resources.tool_to_use) - 1;
 					}
+				}else{
+					_ui.ui_gather_selected=false;
 				}
 			}else{
 				//send humans from resource location to base
@@ -41,12 +44,22 @@ function scr_map_interactions(_mx, _my){
 	}
 	
 	// select base
-	if (_buildings>0){
+	if (_buildings_base>0){
 		if (_ui._show_base_menu){
 			_ui._show_base_menu=false;
 		}else{
 			_ui._show_base_menu=true;
+			_ui._show_tools_menu=false;
 		}
 	}	
 	
+	// select tool maker
+	if (_buildings_tools>0){
+		if (_ui._show_tools_menu){
+			_ui._show_tools_menu=false;
+		}else{
+			_ui._show_tools_menu=true;
+			_ui._show_base_menu=false;
+		}
+	}
 }
