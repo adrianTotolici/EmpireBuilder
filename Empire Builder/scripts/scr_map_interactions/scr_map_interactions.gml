@@ -3,6 +3,7 @@ function scr_map_interactions(_mx, _my){
 	var _resources = instance_position(_mx, _my, obj_par_resources);
 	var _buildings_base = instance_position(_mx, _my, obj_base_lvl_0);
 	var _buildings_tools = instance_position(_mx, _my, obj_tool_maker_lvl_0);
+	var _buildings = instance_position(_mx, _my, obj_par_buildings);
 	
 
 	if (instance_exists(_resources)){
@@ -60,6 +61,20 @@ function scr_map_interactions(_mx, _my){
 		}else{
 			_ui._show_tools_menu=true;
 			_ui._show_base_menu=false;
+		}
+	}
+	
+	//building options menu
+	if (mouse_check_button_pressed(mb_right)){
+		if (_ui._show_building_menu){
+			_ui._show_building_menu=false;
+		}else{
+			if (instance_exists(_buildings)){
+				_ui._show_building_menu=true;
+				_ui.xpos_building_menu=device_mouse_x_to_gui(0);
+				_ui.ypos_building_menu=device_mouse_y_to_gui(0);
+				_ui._selected_building=_buildings;
+			}
 		}
 	}
 }

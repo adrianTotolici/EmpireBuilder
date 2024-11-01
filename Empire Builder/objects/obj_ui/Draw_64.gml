@@ -140,3 +140,13 @@ if (show_tools_inventory){
 	draw_sprite_ext(spr_ui_pickaxe_0,0,_x_pos_start+360,sprite_size/2+45,0.8,0.8,0,c_white,1);
 	draw_text(_x_pos_start+385,sprite_size/2+20,string(floor(ds_map_find_value(global.resources_gather_map, global.tool_keys[0]))));
 }
+
+if (_show_building_menu){
+	draw_set_color(c_white);
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,xpos_building_menu+20,ypos_building_menu,2.6,1,0,c_white,1);
+	draw_text(xpos_building_menu+32,ypos_building_menu-10,"Update building");
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,xpos_building_menu+20,ypos_building_menu+40,2.6,1,0,c_white,1);
+	draw_text(xpos_building_menu+32,ypos_building_menu+32,"Destroy building");
+}

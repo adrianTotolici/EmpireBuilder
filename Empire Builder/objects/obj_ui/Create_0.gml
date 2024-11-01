@@ -25,3 +25,9 @@ ui_gather_selected=false;
 ui_build_selected=false;
 obj_to_build_sel=false;
 build_obj=noone;
+
+//upgrades
+_show_building_menu=false;
+xpos_building_menu=0;
+ypos_building_menu=0;
+_selected_building=noone;

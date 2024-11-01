@@ -3,26 +3,6 @@ function scr_ui_control(){
 	var _my=device_mouse_y_to_gui(0);
 	var _ui=obj_ui;
 	var _x_start_pos=x_size_ui/2-196;
-	
-	//prices
-	
-	//********************************************
-	//** CREATURE **             PRICE          **
-	//********************************************
-	//********************************************
-	//**  HUMAN   **          10 food           **
-	//********************************************
-	
-	//**********************************************
-	//**  BUILDINGS      **         PRICE         **
-	//**********************************************
-	//**********************************************
-	//**  House lvl 0    **       5 grass         **
-	//**********************************************
-	//**  Storage lvl 0  **  10 grass ; 5 clay    **
-	//**********************************************
-	//**  House lvl 1    **  15 grass ; 25 clay   **
-	//**********************************************
 		
 	var _human_price=10;
 
@@ -56,6 +36,7 @@ function scr_ui_control(){
 	
 	if (mouse_check_button_pressed(mb_right)){
 		_ui.ui_gather_selected=false;
+		
 	}
 
 	// build human menu button
@@ -186,6 +167,15 @@ function scr_ui_control(){
 			_ui.show_tools_inventory=true;
 		}
 	}
+	
+	//buildings_menu
+	if (_ui._show_building_menu && mouse_check_button_pressed(mb_left) && _mx> _ui.xpos_building_menu+20 && _mx<_ui.xpos_building_menu+175 && _my>_ui.ypos_building_menu-20 && _my<_ui.ypos_building_menu+16){
+		update_succesful=update_building(_ui);	
+	}
+	if (_ui._show_building_menu && mouse_check_button_pressed(mb_left) && _mx> _ui.xpos_building_menu+20 && _mx<_ui.xpos_building_menu+175 && _my>_ui.ypos_building_menu+20 && _my<_ui.ypos_building_menu+56){
+		_ui._selected_building.destory_object=true;	
+		_ui._show_building_menu=false;
+	}
 }
 
 function check_material_available(_build_obj){
@@ -201,4 +191,41 @@ function check_material_available(_build_obj){
 		}
 	}
 	return _materials_own;
+}
+
+function update_building(_ui){
+	_building=_ui._selected_building;
+	xpos=_ui._selected_building.x;
+	ypos=_ui._selected_building.y;
+	
+	new_building = noone;
+	building_valid=true;
+	
+	switch (_building.object_index) { 
+		case obj_house_lvl_0: 
+			new_building = obj_house_lvl_1; 
+			break; 
+		default: 
+			building_valid= false;
+			break; 
+	}
+	if (building_valid){
+		if (check_material_available(new_building)){
+			instance_create_layer(xpos,ypos,"Terrain",new_building);
+			_materials=scr_init_recepies(new_building);
+			var _keys = ds_map_keys_to_array(_materials);
+			for (var _i = 0; _i < array_length(_keys); _i++) {
+				var _value = ds_map_find_value(_materials, _keys[_i]);
+				global.resources_gather_map[? _keys[_i]] = ds_map_find_value(global.resources_gather_map, _keys[_i]) - _value;
+			}
+			_ui._selected_building.destory_object=true;
+			_ui._show_building_menu=false;
+		}else{
+			_ui._text_warning="Need resource to build a mud house";
+			_ui._show_warning=true;
+		}
+	}else{
+		_ui._text_warning="No future update available.";
+		_ui._show_warning=true;
+	}
 }
