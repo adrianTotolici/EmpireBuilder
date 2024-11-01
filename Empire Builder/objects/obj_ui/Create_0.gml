@@ -23,6 +23,7 @@ _text_warning = "";
 
 ui_gather_selected=false;
 ui_build_selected=false;
+ui_attack_selected=false;
 obj_to_build_sel=false;
 build_obj=noone;
 

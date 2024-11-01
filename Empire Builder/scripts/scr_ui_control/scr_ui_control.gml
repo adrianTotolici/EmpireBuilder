@@ -34,6 +34,15 @@ function scr_ui_control(){
 		}
 	}
 	
+	//attack button pressed
+	if ( _my<_ui.y_size_ui-12 && _my>_ui.y_size_ui-_ui.sprite_size+12 && _mx>_ui.x_size_ui/2+_ui.sprite_size*2 && _mx<_ui.x_size_ui/2+(_ui.sprite_size*3)){
+		if (_ui.ui_attack_selected){
+			_ui.ui_attack_selected=false;
+		}else{
+			_ui.ui_attack_selected=true;
+		}
+	}
+	
 	if (mouse_check_button_pressed(mb_right)){
 		_ui.ui_gather_selected=false;
 		
@@ -123,15 +132,6 @@ function scr_ui_control(){
 				}
 			}
 			if (_my>280-15 && _my<280+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
-				if (check_material_available(obj_house_lvl_1)){
-					_ui.obj_to_build_sel=true;
-					_ui.build_obj=obj_house_lvl_1;
-				}else{
-					_ui._text_warning="Need resource to build a mud house";
-					_ui._show_warning=true;
-				}
-			}
-			if (_my>320-15 && _my<320+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
 				if (check_material_available(obj_tool_maker_lvl_0)){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_tool_maker_lvl_0;
@@ -169,9 +169,11 @@ function scr_ui_control(){
 	}
 	
 	//buildings_menu
+	//upgarde
 	if (_ui._show_building_menu && mouse_check_button_pressed(mb_left) && _mx> _ui.xpos_building_menu+20 && _mx<_ui.xpos_building_menu+175 && _my>_ui.ypos_building_menu-20 && _my<_ui.ypos_building_menu+16){
 		update_succesful=update_building(_ui);	
 	}
+	//destory
 	if (_ui._show_building_menu && mouse_check_button_pressed(mb_left) && _mx> _ui.xpos_building_menu+20 && _mx<_ui.xpos_building_menu+175 && _my>_ui.ypos_building_menu+20 && _my<_ui.ypos_building_menu+56){
 		_ui._selected_building.destory_object=true;	
 		_ui._show_building_menu=false;

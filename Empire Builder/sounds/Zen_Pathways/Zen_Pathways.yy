@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":3,
   "conversionMode":0,
-  "duration":32.052246,
+  "duration":23.980408,
   "name":"Zen_Pathways",
   "parent":{
     "name":"background_music",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"Zen_Pathways.mp3",
   "type":1,
-  "volume":0.29,
+  "volume":1.0,
 }

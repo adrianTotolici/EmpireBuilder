@@ -119,6 +119,7 @@
     {"id":{"name":"spr_storage_lvl0","path":"sprites/spr_storage_lvl0/spr_storage_lvl0.yy",},},
     {"id":{"name":"spr_terrain","path":"sprites/spr_terrain/spr_terrain.yy",},},
     {"id":{"name":"spr_tool_make_lvl0","path":"sprites/spr_tool_make_lvl0/spr_tool_make_lvl0.yy",},},
+    {"id":{"name":"spr_ui_attack","path":"sprites/spr_ui_attack/spr_ui_attack.yy",},},
     {"id":{"name":"spr_ui_berry","path":"sprites/spr_ui_berry/spr_ui_berry.yy",},},
     {"id":{"name":"spr_ui_build","path":"sprites/spr_ui_build/spr_ui_build.yy",},},
     {"id":{"name":"spr_ui_button_black_background","path":"sprites/spr_ui_button_black_background/spr_ui_button_black_background.yy",},},

@@ -10,7 +10,7 @@ draw_set_color(c_white);
 draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*ui_button_scale),(sprite_size/2),ui_button_scale,1,0,c_white,1);
 draw_text(x_size_ui-(sprite_size*ui_button_scale)/2-25,(sprite_size/2)-8,_text_menu_button);
 
-// Draw ui interact buttons
+// Draw ui interact buttons gather
 draw_set_color(c_white);
 draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
 draw_sprite_ext(spr_ui_gather,0,x_size_ui/2,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
@@ -18,12 +18,20 @@ if (ui_gather_selected){
 	draw_sprite_ext(spr_ui_select,0,x_size_ui/2,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
 }
 
-//Draw ui interact buttons
+//Draw ui interact buttons build
 draw_set_color(c_white);
 draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+sprite_size,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
 draw_sprite_ext(spr_ui_build,0,x_size_ui/2+sprite_size+5,y_size_ui-(sprite_size/2),0.8,0.8,0,c_white,1);
 if (ui_build_selected){
 	draw_sprite_ext(spr_ui_select,0,x_size_ui/2+sprite_size,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
+}
+
+//Draw ui interact buttons attack
+draw_set_color(c_white);
+draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+sprite_size*2,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
+draw_sprite_ext(spr_ui_attack,0,x_size_ui/2+sprite_size*2+8,y_size_ui-(sprite_size/2)-3,0.65,0.65,0,c_white,1);
+if (ui_attack_selected){
+	draw_sprite_ext(spr_ui_select,0,x_size_ui/2+sprite_size*2,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
 }
 
 var _x_pos_start=x_size_ui/2-196;
@@ -92,12 +100,8 @@ if (ui_build_selected){
 	draw_text(x_size_ui-sprite_size-35,240-7,"storage")
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,280,2.7,1,0,c_white,1);
-	draw_sprite_ext(spr_house_lvl1,0,x_size_ui-(sprite_size*2),278,0.5,0.5,0,c_white,1);
-	draw_text(x_size_ui-sprite_size-35,280-7,"mud house")
-	
-	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,320,2.7,1,0,c_white,1);
-	draw_sprite_ext(spr_tool_make_lvl0,0,x_size_ui-(sprite_size*2),315,0.5,0.5,0,c_white,1);
-	draw_text(x_size_ui-sprite_size-35,320-7,"tool maker")
+	draw_sprite_ext(spr_tool_make_lvl0,0,x_size_ui-(sprite_size*2),278,0.5,0.5,0,c_white,1);
+	draw_text(x_size_ui-sprite_size-35,280-7,"tool maker")
 }
 
 if (obj_to_build_sel){
