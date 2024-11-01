@@ -5,3 +5,5 @@ if (global.full_screen) {
 	// Set the window to fullscreen
 	window_set_fullscreen(true);
 }
+
+audio_play_sound(Zen_Pathways, 1, true);

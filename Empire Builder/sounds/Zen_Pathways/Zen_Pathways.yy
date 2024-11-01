@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"Zen_Pathways",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":3,
+  "conversionMode":0,
+  "duration":32.052246,
+  "name":"Zen_Pathways",
+  "parent":{
+    "name":"background_music",
+    "path":"folders/Sounds/background_music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Zen_Pathways.mp3",
+  "type":1,
+  "volume":0.29,
+}
