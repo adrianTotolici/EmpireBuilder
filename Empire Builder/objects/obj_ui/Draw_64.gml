@@ -26,13 +26,13 @@ if (ui_build_selected){
 	draw_sprite_ext(spr_ui_select,0,x_size_ui/2+sprite_size,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
 }
 
-////Draw ui interact buttons attack
-//draw_set_color(c_white);
-//draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+sprite_size*2,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
-//draw_sprite_ext(spr_ui_attack,0,x_size_ui/2+sprite_size*2+8,y_size_ui-(sprite_size/2)-3,0.65,0.65,0,c_white,1);
-//if (ui_attack_selected){
-//	draw_sprite_ext(spr_ui_select,0,x_size_ui/2+sprite_size*2,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
-//}
+//Draw ui interact buttons attack
+draw_set_color(c_white);
+draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui/2+sprite_size*2,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
+draw_sprite_ext(spr_ui_attack,0,x_size_ui/2+sprite_size*2+8,y_size_ui-(sprite_size/2)-3,0.65,0.65,0,c_white,1);
+if (ui_attack_selected){
+	draw_sprite_ext(spr_ui_select,0,x_size_ui/2+sprite_size*2,y_size_ui-(sprite_size/2),1,1,0,c_white,1);
+}
 
 var _x_pos_start=x_size_ui/2-196;
 

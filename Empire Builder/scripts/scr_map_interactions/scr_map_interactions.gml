@@ -91,6 +91,8 @@ function scr_map_interactions(_mx, _my){
 				human.state_attack= true;
 				human.creature_to_attack=_creature;
 				human.human_created=true;
+				human.base_posx=obj_base_lvl_0.x;
+				human.base_posy=obj_base_lvl_0.y;
 				global.pop_used += 1;
 			}
 		}

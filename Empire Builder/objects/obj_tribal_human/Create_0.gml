@@ -8,6 +8,7 @@ target_x = 0;
 target_y = 0; 
 
 human_created=false;
+speed=0.5;
 
 spr_up=spr_human_move_up_blue;
 spr_down=spr_human_move_down_blue;

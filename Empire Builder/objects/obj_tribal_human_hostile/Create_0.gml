@@ -7,6 +7,7 @@ event_inherited();
 target_x = 0;
 target_y = 0; 
 
+speed=0.3;
 human_created=false;
 
 spr_up=spr_human_move_up_red;
@@ -14,5 +15,3 @@ spr_down=spr_human_move_down_red;
 spr_side=spr_human_move_side_red;
 spr_stand=spr_human_stand_red;
 spr_attack=spr_human_attack_red;
-
-speed=0.3;

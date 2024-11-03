@@ -20,8 +20,12 @@ state_attack = false;
 state_defense = false;
 
 creature_to_attack = noone;
+creature_to_defend = noone;
 
 hp=100;
 atk=50;
 
 start_fight =false;
+finish_fight = false;
+base_posx=noone;
+base_posy=noone;
