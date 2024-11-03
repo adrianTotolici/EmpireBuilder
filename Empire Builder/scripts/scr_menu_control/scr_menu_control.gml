@@ -45,8 +45,9 @@ function init_values(){
 			ds_map_add(global.resources_gather_map, global.resources_keys[0], 0);
 			ds_map_add(global.resources_gather_map, global.resources_keys[1], 0);
 			ds_map_add(global.resources_gather_map, global.resources_keys[2], 0);
+			ds_map_add(global.resources_gather_map, global.resources_keys[3], 0);
 			//tools
-			ds_map_add(global.resources_gather_map, global.tool_keys[0], 0);
+			ds_map_add(global.resources_gather_map, global.tool_keys[0], 1);
 		
 			global.pop=4;
 			global.pop_used=0;

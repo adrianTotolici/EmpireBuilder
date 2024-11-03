@@ -13,4 +13,4 @@ spr_up=spr_human_move_up_blue;
 spr_down=spr_human_move_down_blue;
 spr_side=spr_human_move_side_blue;
 spr_stand=spr_human_stand_blue;
-
+spr_attack=spr_human_attack_blue;

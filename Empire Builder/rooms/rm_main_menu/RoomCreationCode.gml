@@ -1,4 +1,4 @@
-global.dev_mode=true;
+global.dev_mode=false;
 if (global.dev_mode){
 	global.full_screen=false;
 }else{

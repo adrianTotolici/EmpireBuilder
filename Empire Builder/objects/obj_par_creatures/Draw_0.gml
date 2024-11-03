@@ -25,6 +25,16 @@ if (direction>=225 && direction<315){
 	sprite_index = spr_down;
 }
 
-if (speed == 0){
+if (speed == 0 && !state_attack){
 	sprite_index=spr_stand;	
+}
+
+if (speed==0 && state_attack){
+	sprite_index=spr_attack;
+}
+
+if (state_defense){
+	image_xscale = -1*xscale;
+	image_yscale = 1*yscale;
+	sprite_index=spr_attack;
 }

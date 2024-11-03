@@ -117,7 +117,7 @@ function scr_ui_control(){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_house_lvl_0;
 				}else{
-					_ui._text_warning="Need resource to build a straw House";
+					_ui._text_warning="Need 5 straws resource to build a straw House";
 					_ui._show_warning=true;
 				}
 			}
@@ -127,7 +127,7 @@ function scr_ui_control(){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_storage_lvl_0;
 				}else{
-					_ui._text_warning="Need resource to build a storage";
+					_ui._text_warning="Need 10 straws and 5 clay resource to build a storage";
 					_ui._show_warning=true;
 				}
 			}
@@ -136,7 +136,7 @@ function scr_ui_control(){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_tool_maker_lvl_0;
 				}else{
-					_ui._text_warning="Need resource to build a tool maker.";
+					_ui._text_warning="Need 10 straws and 15 clay resource to build a tool maker.";
 					_ui._show_warning=true;
 				}
 			}

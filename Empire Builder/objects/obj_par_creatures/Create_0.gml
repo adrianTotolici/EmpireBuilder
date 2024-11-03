@@ -7,9 +7,21 @@ spr_side=noone;
 spr_up=noone;
 spr_down=noone;
 spr_stand=noone;
+spr_attack=noone;
 
 xscale=1;
 yscale=1;
 
 image_xscale=xscale;
 image_yscale=yscale;
+
+state_gather = false;
+state_attack = false;
+state_defense = false;
+
+creature_to_attack = noone;
+
+hp=100;
+atk=50;
+
+start_fight =false;
