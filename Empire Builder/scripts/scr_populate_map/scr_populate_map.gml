@@ -35,7 +35,7 @@ function scr_populate_map(_sprite_size){
 		}
 	}
 	
-	nr_of_hostiles=random_range(20,150);
+	nr_of_hostiles=random_range(100,300);
 	for (i=1; i<=nr_of_hostiles; i++){
 		xpos=random_range(0,room_width);
 		ypos=random_range(0,room_height);

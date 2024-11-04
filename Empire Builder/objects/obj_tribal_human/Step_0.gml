@@ -23,8 +23,17 @@ if (finish_fight && state_attack == false && start_fight == false){
 	if (speed ==0 ) {
 		speed = 0.5;
 	}
-	move_towards_point(base_posx, base_posy, speed);
-	if (point_distance(x, y, base_posx, base_posy) < speed) {
+	if (base_posx>0 && base_posy >0){
+		var _posx=base_posx;
+		var _posy=base_posy;
+	}else{
+		if (target_x >0 && target_y >0){
+			var _posx=target_x;
+			var _posy=target_y;
+		}
+	}
+	move_towards_point(_posx, _posy, speed);
+	if (point_distance(x, y, _posx, _posy) < speed) {
 		speed = 0;
 		instance_destroy();
 		global.pop_used -= 1;
@@ -34,4 +43,10 @@ if (finish_fight && state_attack == false && start_fight == false){
 if (hp<1){
 	global.pop -=1;
 	global.pop_used -=1;
+	if (target_x >0 && target_y >0){
+		var _resources = instance_position(target_x, target_y-10, obj_par_resources);
+		if (instance_exists(_resources)){
+			_resources.harvested=false;
+		}
+	}
 }

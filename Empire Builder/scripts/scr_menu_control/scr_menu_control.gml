@@ -22,7 +22,7 @@ function init_values(){
 		
 		if (global.dev_mode){
 			//food
-			ds_map_add(global.resources_gather_map, global.food_keys[0], 10);
+			ds_map_add(global.resources_gather_map, global.food_keys[0], 1000);
 			ds_map_add(global.resources_gather_map, global.food_keys[1], 50);
 			//materials
 			ds_map_add(global.resources_gather_map, global.resources_keys[0], 50);
@@ -32,7 +32,7 @@ function init_values(){
 			//tools
 			ds_map_add(global.resources_gather_map, global.tool_keys[0], 1);
 		
-			global.pop=4;
+			global.pop=20;
 			global.pop_used=0;
 			global.terrain_resource_matrix= [];
 			global.house=0;

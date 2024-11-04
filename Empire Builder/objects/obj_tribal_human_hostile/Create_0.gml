@@ -12,6 +12,7 @@ range = 100;
 
 speed=0.3;
 human_created=false;
+atk=1.1;
 
 spr_up=spr_human_move_up_red;
 spr_down=spr_human_move_down_red;

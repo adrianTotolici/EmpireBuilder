@@ -10,6 +10,7 @@ if (state_attack && creature_to_attack>0){
 			creature_to_attack.speed=0;
 			creature_to_attack.state_attack=true;
 			creature_to_attack.creature_to_attack=id;
+			
 			if (!start_fight){
 				alarm[0]=200;
 				start_fight=true;

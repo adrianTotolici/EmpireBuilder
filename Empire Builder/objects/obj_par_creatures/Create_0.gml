@@ -22,8 +22,9 @@ state_defense = false;
 creature_to_attack = noone;
 creature_to_defend = noone;
 
-hp=100;
-atk=50;
+max_health=10;
+hp=max_health;
+atk=1;
 
 start_fight =false;
 finish_fight = false;
