@@ -8,4 +8,4 @@ sprite_size=64;
 _start_game = "Start Game";
 _exit_game = "Exit Game";
 
-_game_version="v0.3";
+_game_version="v0.4";

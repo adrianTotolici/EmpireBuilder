@@ -30,3 +30,8 @@ if (finish_fight && state_attack == false && start_fight == false){
 		global.pop_used -= 1;
 	}	
 }
+
+if (hp<1){
+	global.pop -=1;
+	global.pop_used -=1;
+}

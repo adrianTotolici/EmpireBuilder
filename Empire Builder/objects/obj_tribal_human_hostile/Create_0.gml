@@ -5,7 +5,10 @@
 event_inherited();
 
 target_x = 0;
-target_y = 0; 
+target_y = 0;
+
+target_object = obj_tribal_human;
+range = 100; 
 
 speed=0.3;
 human_created=false;
