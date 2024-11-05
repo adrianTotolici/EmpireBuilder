@@ -136,6 +136,10 @@ if (show_material_inventory){
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+200,sprite_size+135,2,1,0,c_white,1);
 	draw_sprite_ext(spr_ui_stick,0,_x_pos_start+230,sprite_size+149,0.5,0.5,0,c_white,1);
 	draw_text(_x_pos_start+270,sprite_size+129,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[3]))));
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+200,sprite_size+180,2,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_flint,0,_x_pos_start+230,sprite_size+190,0.5,0.5,0,c_white,1);
+	draw_text(_x_pos_start+270,sprite_size+176,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[4]))));
 }
 
 if (show_tools_inventory){

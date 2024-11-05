@@ -31,11 +31,15 @@ function scr_populate_map(_sprite_size){
 					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_stick_bush);
 					global.terrain_resource_matrix[i][j] = true;
 				}
+				if (resource_freq>60 && resource_freq<=61){
+					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_flint_quarry);
+					global.terrain_resource_matrix[i][j] = true;
+				}
 			}
 		}
 	}
 	
-	nr_of_hostiles=random_range(100,300);
+	nr_of_hostiles=random_range(20,100);
 	for (i=1; i<=nr_of_hostiles; i++){
 		xpos=random_range(0,room_width);
 		ypos=random_range(0,room_height);
