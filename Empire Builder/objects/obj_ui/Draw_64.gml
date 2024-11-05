@@ -111,26 +111,26 @@ if (obj_to_build_sel){
 if (show_food_invetory){
 	draw_set_color(c_white);
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+100,sprite_size/2+32,1.5,1,0,c_white,1);
-	draw_sprite_ext(spr_ui_berry,0,_x_pos_start+120,sprite_size/2+45,0.8,0.8,0,c_white,1);
+	draw_sprite_ext(spr_ui_berry,0,_x_pos_start+120,sprite_size/2+45,0.5,0.5,0,c_white,1);
 	draw_text(_x_pos_start+150,sprite_size/2+20,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[0]))));
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+100,sprite_size+45,1.5,1,0,c_white,1);
-	draw_sprite_ext(spr_ui_fish,0,_x_pos_start+120,sprite_size+55,0.8,0.8,0,c_white,1);
+	draw_sprite_ext(spr_ui_fish,0,_x_pos_start+120,sprite_size+55,0.65,0.65,0,c_white,1);
 	draw_text(_x_pos_start+150,sprite_size+35,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[1]))));
 }
 
 if (show_material_inventory){
 	draw_set_color(c_white);
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+200,sprite_size/2+32,2,1,0,c_white,1);
-	draw_sprite_ext(spr_ui_grass,0,_x_pos_start+230,sprite_size/2+45,0.8,0.8,0,c_white,1);
+	draw_sprite_ext(spr_ui_grass,0,_x_pos_start+230,sprite_size/2+45,0.45,0.45,0,c_white,1);
 	draw_text(_x_pos_start+270,sprite_size/2+20,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[0]))));
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+200,sprite_size+45,2,1,0,c_white,1);
-	draw_sprite_ext(spr_ui_clay,0,_x_pos_start+230,sprite_size+55,0.8,0.8,0,c_white,1);
+	draw_sprite_ext(spr_ui_clay,0,_x_pos_start+230,sprite_size+57,0.45,0.45,0,c_white,1);
 	draw_text(_x_pos_start+270,sprite_size+35,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[1]))));
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+200,sprite_size+90,2,1,0,c_white,1);
-	draw_sprite_ext(spr_ui_stone,0,_x_pos_start+230,sprite_size+97,0.8,0.8,0,c_white,1);
+	draw_sprite_ext(spr_ui_stone,0,_x_pos_start+230,sprite_size+105,0.45,0.45,0,c_white,1);
 	draw_text(_x_pos_start+270,sprite_size+82,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[2]))));
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+200,sprite_size+135,2,1,0,c_white,1);
@@ -145,7 +145,7 @@ if (show_material_inventory){
 if (show_tools_inventory){
 	draw_set_color(c_white);
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+332,sprite_size/2+32,2,1,0,c_white,1);
-	draw_sprite_ext(spr_ui_pickaxe_0,0,_x_pos_start+360,sprite_size/2+45,0.8,0.8,0,c_white,1);
+	draw_sprite_ext(spr_ui_pickaxe_0,0,_x_pos_start+360,sprite_size/2+45,0.45,0.45,0,c_white,1);
 	draw_text(_x_pos_start+385,sprite_size/2+20,string(floor(ds_map_find_value(global.resources_gather_map, global.tool_keys[0]))));
 }
 
