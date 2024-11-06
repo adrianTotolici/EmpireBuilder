@@ -111,12 +111,16 @@ if (obj_to_build_sel){
 if (show_food_invetory){
 	draw_set_color(c_white);
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+100,sprite_size/2+32,1.5,1,0,c_white,1);
-	draw_sprite_ext(spr_ui_berry,0,_x_pos_start+120,sprite_size/2+45,0.5,0.5,0,c_white,1);
+	draw_sprite_ext(spr_ui_berry,0,_x_pos_start+120,sprite_size/2+45,0.4,0.4,0,c_white,1);
 	draw_text(_x_pos_start+150,sprite_size/2+20,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[0]))));
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+100,sprite_size+45,1.5,1,0,c_white,1);
 	draw_sprite_ext(spr_ui_fish,0,_x_pos_start+120,sprite_size+55,0.65,0.65,0,c_white,1);
 	draw_text(_x_pos_start+150,sprite_size+35,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[1]))));
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+100,sprite_size+90,1.5,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_herbs,0,_x_pos_start+120,sprite_size+105,0.45,0.45,0,c_white,1);
+	draw_text(_x_pos_start+150,sprite_size+82,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[1]))));
 }
 
 if (show_material_inventory){
