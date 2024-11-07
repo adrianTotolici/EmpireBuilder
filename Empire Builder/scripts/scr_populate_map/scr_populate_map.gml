@@ -39,6 +39,10 @@ function scr_populate_map(_sprite_size){
 					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_herb_bush);
 					global.terrain_resource_matrix[i][j] = true;
 				}
+				if (resource_freq>80 && resource_freq<=81){
+					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_mushrooms_patch);
+					global.terrain_resource_matrix[i][j] = true;
+				}
 			}
 		}
 	}
