@@ -23,24 +23,28 @@ function scr_populate_map(_sprite_size){
 					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_fish_pond);
 					global.terrain_resource_matrix[i][j] = true;
 				}
-				if (resource_freq>40 && resource_freq<=41){
-					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_stone_quarry);
-					global.terrain_resource_matrix[i][j] = true;
-				}
-				if (resource_freq>50 && resource_freq<=51){
-					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_stick_bush);
-					global.terrain_resource_matrix[i][j] = true;
-				}
-				if (resource_freq>60 && resource_freq<=61){
-					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_flint_quarry);
-					global.terrain_resource_matrix[i][j] = true;
-				}
-				if (resource_freq>70 && resource_freq<=71){
-					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_herb_bush);
-					global.terrain_resource_matrix[i][j] = true;
-				}
-				if (resource_freq>80 && resource_freq<=81){
-					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_mushrooms_patch);
+				//if (resource_freq>40 && resource_freq<=41){
+				//	instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_stone_quarry);
+				//	global.terrain_resource_matrix[i][j] = true;
+				//}
+				//if (resource_freq>50 && resource_freq<=51){
+				//	instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_stick_bush);
+				//	global.terrain_resource_matrix[i][j] = true;
+				//}
+				//if (resource_freq>60 && resource_freq<=61){
+				//	instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_flint_quarry);
+				//	global.terrain_resource_matrix[i][j] = true;
+				//}
+				//if (resource_freq>70 && resource_freq<=71){
+				//	instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_herb_bush);
+				//	global.terrain_resource_matrix[i][j] = true;
+				//}
+				//if (resource_freq>80 && resource_freq<=81){
+				//	instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_mushrooms_patch);
+				//	global.terrain_resource_matrix[i][j] = true;
+				//}
+				if (resource_freq>90 && resource_freq<=91){
+					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_hunting_ground);
 					global.terrain_resource_matrix[i][j] = true;
 				}
 			}

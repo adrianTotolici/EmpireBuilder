@@ -15,8 +15,8 @@ function scr_menu_control(){
 }
 
 function init_values(){
-		global.food_keys=["berry","fish","herbs","mushrooms"];
-		global.resources_keys=["grass","clay","stone","sticks","flint"];
+		global.food_keys=["berry","fish","herbs","mushrooms","meat"];
+		global.resources_keys=["grass","clay","stone","sticks","flint","bone","hide"];
 		global.tool_keys=["pickaxe"];
 		global.resources_gather_map =ds_map_create();
 		
@@ -26,12 +26,15 @@ function init_values(){
 			ds_map_add(global.resources_gather_map, global.food_keys[1], 50);
 			ds_map_add(global.resources_gather_map, global.food_keys[2], 50);
 			ds_map_add(global.resources_gather_map, global.food_keys[3], 50);
+			ds_map_add(global.resources_gather_map, global.food_keys[4], 50);
 			//materials
 			ds_map_add(global.resources_gather_map, global.resources_keys[0], 50);
 			ds_map_add(global.resources_gather_map, global.resources_keys[1], 50);
 			ds_map_add(global.resources_gather_map, global.resources_keys[2], 50);
 			ds_map_add(global.resources_gather_map, global.resources_keys[3], 0);
 			ds_map_add(global.resources_gather_map, global.resources_keys[4], 0);
+			ds_map_add(global.resources_gather_map, global.resources_keys[5], 0);
+			ds_map_add(global.resources_gather_map, global.resources_keys[6], 0);
 			//tools
 			ds_map_add(global.resources_gather_map, global.tool_keys[0], 1);
 		
@@ -46,12 +49,15 @@ function init_values(){
 			ds_map_add(global.resources_gather_map, global.food_keys[1], 0);
 			ds_map_add(global.resources_gather_map, global.food_keys[2], 0);
 			ds_map_add(global.resources_gather_map, global.food_keys[3], 0);
+			ds_map_add(global.resources_gather_map, global.food_keys[4], 0);
 			//materials
 			ds_map_add(global.resources_gather_map, global.resources_keys[0], 0);
 			ds_map_add(global.resources_gather_map, global.resources_keys[1], 0);
 			ds_map_add(global.resources_gather_map, global.resources_keys[2], 0);
 			ds_map_add(global.resources_gather_map, global.resources_keys[3], 0);
 			ds_map_add(global.resources_gather_map, global.resources_keys[4], 0);
+			ds_map_add(global.resources_gather_map, global.resources_keys[5], 0);
+			ds_map_add(global.resources_gather_map, global.resources_keys[6], 0);
 			//tools
 			ds_map_add(global.resources_gather_map, global.tool_keys[0], 1);
 		

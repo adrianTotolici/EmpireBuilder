@@ -125,6 +125,10 @@ if (show_food_invetory){
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+100,sprite_size+135,1.5,1,0,c_white,1);
 	draw_sprite_ext(spr_ui_mushroom,0,_x_pos_start+120,sprite_size+149,0.45,0.45,0,c_white,1);
 	draw_text(_x_pos_start+150,sprite_size+129,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[3]))));
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+100,sprite_size+180,1.5,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_meat,0,_x_pos_start+120,sprite_size+190,0.45,0.45,0,c_white,1);
+	draw_text(_x_pos_start+150,sprite_size+176,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[4]))));
 }
 
 if (show_material_inventory){
@@ -147,7 +151,15 @@ if (show_material_inventory){
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+200,sprite_size+180,2,1,0,c_white,1);
 	draw_sprite_ext(spr_ui_flint,0,_x_pos_start+230,sprite_size+190,0.5,0.5,0,c_white,1);
-	draw_text(_x_pos_start+270,sprite_size+176,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[4]))));
+	draw_text(_x_pos_start+270,sprite_size+173,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[4]))));
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+200,sprite_size+225,2,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_bone,0,_x_pos_start+230,sprite_size+236,0.5,0.5,0,c_white,1);
+	draw_text(_x_pos_start+270,sprite_size+220,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[5]))));
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+200,sprite_size+270,2,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_hide,0,_x_pos_start+230,sprite_size+285,0.4,0.4,0,c_white,1);
+	draw_text(_x_pos_start+270,sprite_size+265,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[6]))));
 }
 
 if (show_tools_inventory){
