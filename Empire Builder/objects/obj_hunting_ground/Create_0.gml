@@ -6,3 +6,4 @@ bone_gather=0.1;
 hide_gather=0.1;
 gather_loop=600;
 spr_unocuppied=spr_hunting_ground;
+tool_to_use=global.tool_keys[1];
