@@ -23,13 +23,15 @@ if (finish_fight && state_attack == false && start_fight == false){
 	if (speed ==0 ) {
 		speed = 0.5;
 	}
+	var _posx=0;
+	var _posy=0;
 	if (base_posx>0 && base_posy >0){
-		var _posx=base_posx;
-		var _posy=base_posy;
+		_posx=base_posx;
+		_posy=base_posy;
 	}else{
 		if (target_x >0 && target_y >0){
-			var _posx=target_x;
-			var _posy=target_y;
+			_posx=target_x;
+		    _posy=target_y;
 		}
 	}
 	move_towards_point(_posx, _posy, speed);

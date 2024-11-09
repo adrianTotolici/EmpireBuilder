@@ -1,52 +1,50 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_populate_map(_sprite_size){
 	instance_create_layer(x, y, "Terrain", obj_base_lvl_0);
 	
+	var _berry_bush = 0.01;
+	var _fish_pond = 0.005;
+	var _herb_bush = 0.001;
+	var _hunting_ground = 0.001;
+	var _mushroom_patch = 0.002;
+	var _clay_mine = 0.003;
+	var _flint_quarry = 0.002;
+	var _grass_bush = 0.01;
+	var _stick_bush = 0.01;
+	var _stone_quarry = 0.001;
+
 	for (i=2;i<array_length(global.terrain_resource_matrix)-2;i++){
 		for (j=2;j<array_length(global.terrain_resource_matrix[i])-2;j++){
-			if (global.terrain_resource_matrix[i][j] != true){
-				resource_freq=random_range(1,100);
-				if (resource_freq>0 && resource_freq<=4){
-					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_berry_bush);
-					global.terrain_resource_matrix[i][j] = true;
-				}
-				if (resource_freq>10 && resource_freq<=12){
-					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_grass_bush);
-					global.terrain_resource_matrix[i][j] = true;
-				}
-				if (resource_freq>20 && resource_freq<=21){
-					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_clay_mine);
-					global.terrain_resource_matrix[i][j] = true;
-				}
-				if (resource_freq>30 && resource_freq<=31){
-					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_fish_pond);
-					global.terrain_resource_matrix[i][j] = true;
-				}
-				//if (resource_freq>40 && resource_freq<=41){
-				//	instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_stone_quarry);
-				//	global.terrain_resource_matrix[i][j] = true;
-				//}
-				//if (resource_freq>50 && resource_freq<=51){
-				//	instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_stick_bush);
-				//	global.terrain_resource_matrix[i][j] = true;
-				//}
-				//if (resource_freq>60 && resource_freq<=61){
-				//	instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_flint_quarry);
-				//	global.terrain_resource_matrix[i][j] = true;
-				//}
-				//if (resource_freq>70 && resource_freq<=71){
-				//	instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_herb_bush);
-				//	global.terrain_resource_matrix[i][j] = true;
-				//}
-				//if (resource_freq>80 && resource_freq<=81){
-				//	instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_mushrooms_patch);
-				//	global.terrain_resource_matrix[i][j] = true;
-				//}
-				if (resource_freq>90 && resource_freq<=91){
-					instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_hunting_ground);
-					global.terrain_resource_matrix[i][j] = true;
-				}
+			var _rand = random(1);
+			if (_rand < _berry_bush) { 
+				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_berry_bush);
+	            global.terrain_resource_matrix[i][j] = true; 
+			}else if (_rand < _berry_bush + _fish_pond) {
+				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_fish_pond);
+	            global.terrain_resource_matrix[i][j] = true; 
+			} else if (_rand < _berry_bush + _fish_pond + _herb_bush) { 
+				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_herb_bush);
+	            global.terrain_resource_matrix[i][j] = true; 
+			} else if (_rand < _berry_bush + _fish_pond + _herb_bush + _hunting_ground) { 
+				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_hunting_ground);
+	            global.terrain_resource_matrix[i][j] = true; 
+			} else if (_rand < _berry_bush + _fish_pond + _herb_bush + _hunting_ground + _mushroom_patch) { 
+				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_mushrooms_patch);
+	            global.terrain_resource_matrix[i][j] = true; 
+			} else if (_rand < _berry_bush + _fish_pond + _herb_bush + _hunting_ground + _mushroom_patch + _clay_mine) { 
+				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_clay_mine);
+	            global.terrain_resource_matrix[i][j] = true; 
+			} else if (_rand < _berry_bush + _fish_pond + _herb_bush + _hunting_ground + _mushroom_patch + _clay_mine + _flint_quarry) { 
+				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_flint_quarry);
+	            global.terrain_resource_matrix[i][j] = true; 
+			} else if (_rand < _berry_bush + _fish_pond + _herb_bush + _hunting_ground + _mushroom_patch + _clay_mine + _flint_quarry + _grass_bush) { 
+				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_grass_bush);
+	            global.terrain_resource_matrix[i][j] = true; 
+			} else if (_rand < _berry_bush + _fish_pond + _herb_bush + _hunting_ground + _mushroom_patch + _clay_mine + _flint_quarry + _grass_bush + _stick_bush) { 
+				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_stick_bush);
+	            global.terrain_resource_matrix[i][j] = true; 
+			} else if (_rand < _berry_bush + _fish_pond + _herb_bush + _hunting_ground + _mushroom_patch + _clay_mine + _flint_quarry + _grass_bush + _stick_bush + _stone_quarry) { 
+				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_stone_quarry);
+	            global.terrain_resource_matrix[i][j] = true; 
 			}
 		}
 	}

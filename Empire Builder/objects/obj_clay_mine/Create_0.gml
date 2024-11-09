@@ -1,6 +1,6 @@
 /// @description Insert description here
 event_inherited();
-resources_gather=1;
+resources_gather=0.1;
 spr_ocuppied=spr_clay_mine_ocupied;
 spr_unocuppied=spr_clay_mine;
-gather_loop=400;
+gather_loop=2500;
