@@ -114,16 +114,25 @@ function scr_ui_control(){
 	
 	//build
 	if (mouse_check_button_pressed(mb_left) && _ui.ui_build_selected){
+		if (x < 0) x = 0; 
+if (x > room_width) x = room_width; 
+if (y < 0) y = 0; 
+if (y > room_height) y = room_height;
 		if (_ui.obj_to_build_sel){
-			instance_create_layer(mouse_x,mouse_y,"Terrain",_ui.build_obj);
-			_materials=scr_init_recepies(_ui.build_obj);
-			_ui.obj_to_build_sel=false;
-			_ui.build_obj=noone;
-			var _keys = ds_map_keys_to_array(_materials);
-			for (var _i = 0; _i < array_length(_keys); _i++) {
-				var _value = ds_map_find_value(_materials, _keys[_i]);
-				global.resources_gather_map[? _keys[_i]] = ds_map_find_value(global.resources_gather_map, _keys[_i]) - _value;
-			}	
+			if (mouse_x < 0 || mouse_x > room_width || mouse_y < 0 || mouse_y > room_height){
+				_ui._show_warning=true;
+				_ui._text_warning="Building can't be placed outside play map.";
+			}else{
+				instance_create_layer(mouse_x,mouse_y,"Terrain",_ui.build_obj);
+				_materials=scr_init_recepies(_ui.build_obj);
+				_ui.obj_to_build_sel=false;
+				_ui.build_obj=noone;
+				var _keys = ds_map_keys_to_array(_materials);
+				for (var _i = 0; _i < array_length(_keys); _i++) {
+					var _value = ds_map_find_value(_materials, _keys[_i]);
+					global.resources_gather_map[? _keys[_i]] = ds_map_find_value(global.resources_gather_map, _keys[_i]) - _value;
+				}
+			}
 		}else{
 			if (_my>200-15 && _my<200+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
 				if (check_material_available(obj_house_lvl_0)){
@@ -188,8 +197,10 @@ function scr_ui_control(){
 	}
 	//destory
 	if (_ui._show_building_menu && mouse_check_button_pressed(mb_left) && _mx> _ui.xpos_building_menu+20 && _mx<_ui.xpos_building_menu+175 && _my>_ui.ypos_building_menu+20 && _my<_ui.ypos_building_menu+56){
-		_ui._selected_building.destory_object=true;	
-		_ui._show_building_menu=false;
+		if (_ui._selected_building != instance_find(obj_base_lvl_0, 0)){
+			_ui._selected_building.destory_object=true;	
+			_ui._show_building_menu=false;
+		}
 	}
 }
 

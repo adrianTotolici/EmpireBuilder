@@ -21,8 +21,18 @@ if (!alarm_started){
 		global.pop -= 1;
 	}
 	if (global.pop <=0){
+		var _total_food = 0
+		for (var _i=0; _i<array_length(global.food_keys); _i++){
+			_total_food += ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
+		}
+		if (_total_food < 10){
+			global.game_lost=true;
+		}
+	}
+	if (global.game_lost){
 		obj_ui._text_warning = "Game lost";
 		obj_ui._show_warning = true;
-		alarm[1]=120;
+		alarm[1]=200;
+		global.game_lost = false;
 	}
 }

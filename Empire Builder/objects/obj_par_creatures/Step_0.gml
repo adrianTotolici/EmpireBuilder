@@ -26,3 +26,8 @@ if (state_attack && creature_to_attack>0){
 if (hp<1){
 	instance_destroy();
 }
+
+if (x < 0) x = 0; 
+if (x > room_width) x = room_width; 
+if (y < 0) y = 0; 
+if (y > room_height) y = room_height;

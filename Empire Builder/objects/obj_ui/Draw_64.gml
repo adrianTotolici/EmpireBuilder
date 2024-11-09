@@ -182,7 +182,8 @@ if (_show_building_menu){
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,xpos_building_menu+20,ypos_building_menu,2.6,1,0,c_white,1);
 	draw_text(xpos_building_menu+32,ypos_building_menu-10,"Update building");
-	
-	draw_sprite_ext(spr_ui_button_black_background,0,xpos_building_menu+20,ypos_building_menu+40,2.6,1,0,c_white,1);
-	draw_text(xpos_building_menu+32,ypos_building_menu+32,"Destroy building");
+	if (_selected_building != instance_find(obj_base_lvl_0, 0)){
+		draw_sprite_ext(spr_ui_button_black_background,0,xpos_building_menu+20,ypos_building_menu+40,2.6,1,0,c_white,1);
+		draw_text(xpos_building_menu+32,ypos_building_menu+32,"Destroy building");
+	}
 }
