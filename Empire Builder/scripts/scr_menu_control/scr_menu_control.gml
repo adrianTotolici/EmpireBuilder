@@ -20,6 +20,7 @@ function init_values(){
 		global.tool_keys=["pickaxe","spear"];
 		global.resources_gather_map =ds_map_create();
 		global.game_lost=false;
+		global.game_win=false;
 		
 		if (global.dev_mode){
 			//food

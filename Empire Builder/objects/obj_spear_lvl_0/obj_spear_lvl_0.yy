@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"tools",
-    "path":"folders/Objects/buildings/tools.yy",
+    "path":"folders/Objects/buildings_and_tools/tools.yy",
   },
   "parentObjectId":{
     "name":"obj_par_buildings",

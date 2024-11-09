@@ -106,6 +106,10 @@ if (ui_build_selected){
 	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,280,2.7,1,0,c_white,1);
 	draw_sprite_ext(spr_tool_make_lvl0,0,x_size_ui-(sprite_size*2),278,0.5,0.5,0,c_white,1);
 	draw_text(x_size_ui-sprite_size-35,280-7,"tool maker")
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,320,2.7,1,0,c_white,1);
+	draw_sprite_ext(spr_wonder_lvl0,0,x_size_ui-(sprite_size*2),332,0.5,0.5,0,c_white,1);
+	draw_text(x_size_ui-sprite_size-35,320-7,"wonder")
 }
 
 if (obj_to_build_sel){

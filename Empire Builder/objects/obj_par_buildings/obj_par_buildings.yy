@@ -10,8 +10,8 @@
   "name":"obj_par_buildings",
   "overriddenProperties":[],
   "parent":{
-    "name":"buildings",
-    "path":"folders/Objects/buildings.yy",
+    "name":"buildings_and_tools",
+    "path":"folders/Objects/buildings_and_tools.yy",
   },
   "parentObjectId":null,
   "persistent":false,

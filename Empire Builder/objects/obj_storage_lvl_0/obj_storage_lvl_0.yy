@@ -11,8 +11,8 @@
   "name":"obj_storage_lvl_0",
   "overriddenProperties":[],
   "parent":{
-    "name":"main_base",
-    "path":"folders/Objects/buildings/main_base.yy",
+    "name":"buildings",
+    "path":"folders/Objects/buildings_and_tools/buildings.yy",
   },
   "parentObjectId":{
     "name":"obj_par_buildings",

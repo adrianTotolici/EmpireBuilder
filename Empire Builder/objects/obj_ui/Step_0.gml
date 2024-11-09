@@ -13,7 +13,7 @@ if (show_debug){
 }
 
 if (_show_warning && !start_alarm){
-	alarm[0]=120;
+	alarm[0]=200;
 	start_alarm=true
 }
 

@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pickaxe_lvl_0",
+  "%Name":"obj_wonder_lvl0",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_pickaxe_lvl_0",
+  "name":"obj_wonder_lvl0",
   "overriddenProperties":[],
   "parent":{
-    "name":"tools",
-    "path":"folders/Objects/buildings_and_tools/tools.yy",
+    "name":"buildings",
+    "path":"folders/Objects/buildings_and_tools/buildings.yy",
   },
   "parentObjectId":{
     "name":"obj_par_buildings",
@@ -31,10 +34,10 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
-    "name":"spr_ui_pickaxe_0",
-    "path":"sprites/spr_ui_pickaxe_0/spr_ui_pickaxe_0.yy",
+    "name":"spr_wonder_lvl0",
+    "path":"sprites/spr_wonder_lvl0/spr_wonder_lvl0.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -35,4 +35,10 @@ if (!alarm_started){
 		alarm[1]=200;
 		global.game_lost = false;
 	}
+	if (global.game_win){
+		obj_ui._text_warning = "Game won. You have progress to next age.";
+		obj_ui._show_warning = true;
+		alarm[2]=200;
+		global.game_win = false;
+	}
 }
