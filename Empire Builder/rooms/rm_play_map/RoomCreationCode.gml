@@ -6,4 +6,7 @@ if (global.full_screen) {
 	window_set_fullscreen(true);
 }
 
+
+
+
 audio_play_sound(snd_zen_pathways, 1, true);

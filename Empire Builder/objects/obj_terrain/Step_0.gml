@@ -1,6 +1,6 @@
 /// @description Insert description here
 if (!alarm_started){
-	var _food_eaten=global.pop*0.2;
+	var _food_eaten=global.pop*0.01;
 	for (var _i=0; _i<array_length(global.food_keys); _i++){
 		if (_food_eaten <= ds_map_find_value(global.resources_gather_map, global.food_keys[_i])){
 			global.resources_gather_map[? global.food_keys[_i]] = ds_map_find_value(global.resources_gather_map, global.food_keys[_i]) - _food_eaten;
@@ -36,7 +36,7 @@ if (!alarm_started){
 		global.game_lost = false;
 	}
 	if (global.game_win){
-		obj_ui._text_warning = "Game won. You have progress to next age.";
+		obj_ui._text_warning = "Game won. You have progressed to next age.";
 		obj_ui._show_warning = true;
 		alarm[2]=200;
 		global.game_win = false;

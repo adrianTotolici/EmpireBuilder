@@ -26,4 +26,5 @@ for (a=0;a<_x_sprites;a++){
 	global.terrain_resource_matrix[a] = array_create(_y_sprites,false);
 }
 
+
 scr_populate_map(_sprite_size);

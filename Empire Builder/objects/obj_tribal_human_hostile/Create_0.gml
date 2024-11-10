@@ -19,3 +19,4 @@ spr_down=spr_human_move_down_red;
 spr_side=spr_human_move_side_red;
 spr_stand=spr_human_stand_red;
 spr_attack=spr_human_attack_red;
+execution_count=0;

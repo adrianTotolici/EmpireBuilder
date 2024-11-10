@@ -1,4 +1,5 @@
 /// @description draw buttons
+draw_sprite(spr_main_backgorund, 0, window_get_width()/2,window_get_height()/2);
 draw_set_font(fnt_ui);
 draw_set_color(c_black);
 

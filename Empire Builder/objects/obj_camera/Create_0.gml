@@ -7,9 +7,6 @@ game_set_speed(120, gamespeed_fps);
 window_size_w=window_get_width();
 window_size_h=window_get_height();
 
-//size_w=window_size_w;
-//size_h=window_size_h;
-
 width_step=128;
 height_step=72;
 
