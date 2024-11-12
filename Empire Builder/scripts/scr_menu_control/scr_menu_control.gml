@@ -16,8 +16,8 @@ function scr_menu_control(){
 
 function init_values(){
 		global.food_keys=["berry","fish","herbs","mushrooms","meat"];
-		global.resources_keys=["grass","clay","stone","sticks","flint","bone","hide"];
-		global.tool_keys=["pickaxe","spear"];
+		global.resources_keys=["grass","clay","stone","sticks","flint","bone","hide","wood"];
+		global.tool_keys=["pickaxe","spear","axe"];
 		global.resources_gather_map =ds_map_create();
 		global.game_lost=false;
 		global.game_win=false;
@@ -37,9 +37,11 @@ function init_values(){
 			ds_map_add(global.resources_gather_map, global.resources_keys[4], 120);
 			ds_map_add(global.resources_gather_map, global.resources_keys[5], 120);
 			ds_map_add(global.resources_gather_map, global.resources_keys[6], 120);
+			ds_map_add(global.resources_gather_map, global.resources_keys[7], 120);
 			//tools
 			ds_map_add(global.resources_gather_map, global.tool_keys[0], 1);
 			ds_map_add(global.resources_gather_map, global.tool_keys[1], 1);
+			ds_map_add(global.resources_gather_map, global.tool_keys[2], 1);
 		
 			global.pop=1;
 			global.pop_used=0;
@@ -61,9 +63,11 @@ function init_values(){
 			ds_map_add(global.resources_gather_map, global.resources_keys[4], 0);
 			ds_map_add(global.resources_gather_map, global.resources_keys[5], 0);
 			ds_map_add(global.resources_gather_map, global.resources_keys[6], 0);
+			ds_map_add(global.resources_gather_map, global.resources_keys[7], 0);
 			//tools
 			ds_map_add(global.resources_gather_map, global.tool_keys[0], 0);
 			ds_map_add(global.resources_gather_map, global.tool_keys[1], 0);
+			ds_map_add(global.resources_gather_map, global.tool_keys[2], 0);
 		
 			global.pop=4;
 			global.pop_used=0;

@@ -168,6 +168,10 @@ if (show_material_inventory){
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+200,sprite_size+270,2,1,0,c_white,1);
 	draw_sprite_ext(spr_ui_hide,0,_x_pos_start+230,sprite_size+285,0.4,0.4,0,c_white,1);
 	draw_text(_x_pos_start+270,sprite_size+265,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[6]))));
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+200,sprite_size+315,2,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_wood,0,_x_pos_start+230,sprite_size+325,0.4,0.4,0,c_white,1);
+	draw_text(_x_pos_start+270,sprite_size+310,string(floor(ds_map_find_value(global.resources_gather_map, global.resources_keys[7]))));
 }
 
 if (show_tools_inventory){
@@ -179,6 +183,11 @@ if (show_tools_inventory){
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+332,sprite_size+45,2,1,0,c_white,1);
 	draw_sprite_ext(spr_ui_spear_0,0,_x_pos_start+360,sprite_size+57,0.45,0.45,0,c_white,1);
 	draw_text(_x_pos_start+385,sprite_size+35,string(floor(ds_map_find_value(global.resources_gather_map, global.tool_keys[1]))));
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+332,sprite_size+90,2,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_axe_0,0,_x_pos_start+350,sprite_size+105,0.45,0.45,0,c_white,1);
+	draw_text(_x_pos_start+385,sprite_size+82,string(floor(ds_map_find_value(global.resources_gather_map, global.tool_keys[2]))));
+	
 }
 
 if (_show_building_menu){

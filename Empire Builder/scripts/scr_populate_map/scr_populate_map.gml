@@ -11,6 +11,7 @@ function scr_populate_map(_sprite_size){
 	var _grass_bush = 0.01;
 	var _stick_bush = 0.01;
 	var _stone_quarry = 0.001;
+	var _forest = 0.001;
 
 	for (i=2;i<array_length(global.terrain_resource_matrix)-2;i++){
 		for (j=2;j<array_length(global.terrain_resource_matrix[i])-2;j++){
@@ -44,6 +45,9 @@ function scr_populate_map(_sprite_size){
 	            global.terrain_resource_matrix[i][j] = true; 
 			} else if (_rand < _berry_bush + _fish_pond + _herb_bush + _hunting_ground + _mushroom_patch + _clay_mine + _flint_quarry + _grass_bush + _stick_bush + _stone_quarry) { 
 				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_stone_quarry);
+	            global.terrain_resource_matrix[i][j] = true; 
+			} else if (_rand < _berry_bush + _fish_pond + _herb_bush + _hunting_ground + _mushroom_patch + _clay_mine + _flint_quarry + _grass_bush + _stick_bush + _stone_quarry + _forest) { 
+				instance_create_layer(i*_sprite_size,j*_sprite_size,"Terrain",obj_forest);
 	            global.terrain_resource_matrix[i][j] = true; 
 			}
 		}
