@@ -1,4 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-event_inherited();
-global.game_lost = true;
+global.house -= living_space;
+global.storage_space -= storage_space;

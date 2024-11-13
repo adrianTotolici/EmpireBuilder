@@ -128,9 +128,9 @@ function scr_ui_control(){
 	//build
 	if (mouse_check_button_pressed(mb_left) && _ui.ui_build_selected){
 		if (x < 0) x = 0; 
-if (x > room_width) x = room_width; 
-if (y < 0) y = 0; 
-if (y > room_height) y = room_height;
+		if (x > room_width) x = room_width; 
+		if (y < 0) y = 0; 
+		if (y > room_height) y = room_height;
 		if (_ui.obj_to_build_sel){
 			if (mouse_x < 0 || mouse_x > room_width || mouse_y < 0 || mouse_y > room_height){
 				_ui._show_warning=true;
@@ -176,6 +176,15 @@ if (y > room_height) y = room_height;
 				}
 			}
 			if (_my>320-15 && _my<320+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
+				if (check_material_available(obj_smoke_house_lvl_0)){
+					_ui.obj_to_build_sel=true;
+					_ui.build_obj=obj_smoke_house_lvl_0;
+				}else{
+					_ui._text_warning="Need 15 straws, 25 clay, 5 stone and 10 sticks resource to build a tool maker.";
+					_ui._show_warning=true;
+				}
+			}
+			if (_my>360-15 && _my<360+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
 				if (check_material_available(obj_wonder_lvl0)){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_wonder_lvl0;

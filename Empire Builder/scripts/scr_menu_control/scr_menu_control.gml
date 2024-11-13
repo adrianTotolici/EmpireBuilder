@@ -15,7 +15,7 @@ function scr_menu_control(){
 }
 
 function init_values(){
-		global.food_keys=["berry","fish","herbs","mushrooms","meat"];
+		global.food_keys=["berry","fish","herbs","mushrooms","meat","smoked meat"];
 		global.resources_keys=["grass","clay","stone","sticks","flint","bone","hide","wood"];
 		global.tool_keys=["pickaxe","spear","axe"];
 		global.resources_gather_map =ds_map_create();
@@ -28,7 +28,8 @@ function init_values(){
 			ds_map_add(global.resources_gather_map, global.food_keys[1], 0);
 			ds_map_add(global.resources_gather_map, global.food_keys[2], 0);
 			ds_map_add(global.resources_gather_map, global.food_keys[3], 0);
-			ds_map_add(global.resources_gather_map, global.food_keys[4], 0);
+			ds_map_add(global.resources_gather_map, global.food_keys[4], 10);
+			ds_map_add(global.resources_gather_map, global.food_keys[5], 0);
 			//materials
 			ds_map_add(global.resources_gather_map, global.resources_keys[0], 150);
 			ds_map_add(global.resources_gather_map, global.resources_keys[1], 150);
@@ -55,6 +56,7 @@ function init_values(){
 			ds_map_add(global.resources_gather_map, global.food_keys[2], 0);
 			ds_map_add(global.resources_gather_map, global.food_keys[3], 0);
 			ds_map_add(global.resources_gather_map, global.food_keys[4], 0);
+			ds_map_add(global.resources_gather_map, global.food_keys[5], 0);
 			//materials
 			ds_map_add(global.resources_gather_map, global.resources_keys[0], 0);
 			ds_map_add(global.resources_gather_map, global.resources_keys[1], 0);

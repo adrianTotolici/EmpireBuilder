@@ -1,20 +1,24 @@
 {
   "$GMObject":"",
-  "%Name":"obj_par_buildings",
+  "%Name":"obj_smoke_house_lvl_0",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_par_buildings",
+  "name":"obj_smoke_house_lvl_0",
   "overriddenProperties":[],
   "parent":{
-    "name":"buildings_and_tools",
-    "path":"folders/Objects/buildings_and_tools.yy",
+    "name":"buildings",
+    "path":"folders/Objects/buildings_and_tools/buildings.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_par_buildings",
+    "path":"objects/obj_par_buildings/obj_par_buildings.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,7 +36,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_smoke_house_lvl0",
+    "path":"sprites/spr_smoke_house_lvl0/spr_smoke_house_lvl0.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

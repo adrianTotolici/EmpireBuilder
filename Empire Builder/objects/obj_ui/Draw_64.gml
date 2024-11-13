@@ -112,8 +112,12 @@ if (ui_build_selected){
 	draw_text(x_size_ui-sprite_size-35,280-7,"tool maker")
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,320,2.7,1,0,c_white,1);
-	draw_sprite_ext(spr_wonder_lvl0,0,x_size_ui-(sprite_size*2),332,0.5,0.5,0,c_white,1);
-	draw_text(x_size_ui-sprite_size-35,320-7,"wonder")
+	draw_sprite_ext(spr_smoke_house_lvl0,0,x_size_ui-(sprite_size*2),332,0.5,0.5,0,c_white,1);
+	draw_text(x_size_ui-sprite_size-35,320-7,"smoke house")
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,360,2.7,1,0,c_white,1);
+	draw_sprite_ext(spr_wonder_lvl0,0,x_size_ui-(sprite_size*2),373,0.5,0.5,0,c_white,1);
+	draw_text(x_size_ui-sprite_size-35,360-7,"wonder")
 }
 
 if (obj_to_build_sel){
@@ -139,8 +143,12 @@ if (show_food_invetory){
 	draw_text(_x_pos_start+150,sprite_size+129,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[3]))));
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+100,sprite_size+180,1.5,1,0,c_white,1);
-	draw_sprite_ext(spr_ui_meat,0,_x_pos_start+120,sprite_size+190,0.45,0.45,0,c_white,1);
-	draw_text(_x_pos_start+150,sprite_size+176,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[4]))));
+	draw_sprite_ext(spr_ui_meat,0,_x_pos_start+120,sprite_size+195,0.45,0.45,0,c_white,1);
+	draw_text(_x_pos_start+150,sprite_size+170,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[4]))));
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,_x_pos_start+100,sprite_size+225,1.5,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_smoked_meat,0,_x_pos_start+120,sprite_size+240,0.5,0.5,0,c_white,1);
+	draw_text(_x_pos_start+150,sprite_size+215,string(floor(ds_map_find_value(global.resources_gather_map, global.food_keys[5]))));
 }
 
 if (show_material_inventory){
