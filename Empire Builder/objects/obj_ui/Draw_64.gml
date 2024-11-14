@@ -116,8 +116,12 @@ if (ui_build_selected){
 	draw_text(x_size_ui-sprite_size-35,320-7,"smoke house")
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,360,2.7,1,0,c_white,1);
-	draw_sprite_ext(spr_wonder_lvl0,0,x_size_ui-(sprite_size*2),373,0.5,0.5,0,c_white,1);
-	draw_text(x_size_ui-sprite_size-35,360-7,"wonder")
+	draw_sprite_ext(spr_fish_hut_lvl_0,0,x_size_ui-(sprite_size*2),373,0.5,0.5,0,c_white,1);
+	draw_text(x_size_ui-sprite_size-35,360-7,"fishing hut")
+	
+	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,400,2.7,1,0,c_white,1);
+	draw_sprite_ext(spr_wonder_lvl0,0,x_size_ui-(sprite_size*2),414,0.5,0.5,0,c_white,1);
+	draw_text(x_size_ui-sprite_size-35,400-7,"wonder")
 }
 
 if (obj_to_build_sel){

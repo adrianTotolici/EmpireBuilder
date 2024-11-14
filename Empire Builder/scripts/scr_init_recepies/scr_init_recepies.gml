@@ -36,6 +36,12 @@ function scr_init_recepies(_object){
 			ds_map_add(materials, global.resources_keys[2], 5);
 			ds_map_add(materials, global.resources_keys[3], 10);
 			return materials;
+		case obj_fishing_hut_lvl_0:
+			ds_map_add(materials, global.resources_keys[0], 15);
+			ds_map_add(materials, global.resources_keys[1], 20);
+			ds_map_add(materials, global.resources_keys[2], 5);
+			ds_map_add(materials, global.resources_keys[3], 5);
+			return materials;
 		case obj_wonder_lvl0:
 			ds_map_add(materials, global.resources_keys[1], 30);
 			ds_map_add(materials, global.resources_keys[0], 50);

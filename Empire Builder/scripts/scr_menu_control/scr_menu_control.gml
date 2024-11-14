@@ -19,8 +19,12 @@ function init_values(){
 		global.resources_keys=["grass","clay","stone","sticks","flint","bone","hide","wood"];
 		global.tool_keys=["pickaxe","spear","axe"];
 		global.resources_gather_map =ds_map_create();
+		
 		global.game_lost=false;
 		global.game_win=false;
+		
+		global.bonuses_map = ds_map_create();
+		global.bonus_keys=["fishing"];
 		
 		if (global.dev_mode){
 			//food
@@ -77,4 +81,6 @@ function init_values(){
 			global.house=0;
 			global.storage_space=0;
 		}
+		
+		ds_map_add(global.bonuses_map, global.bonus_keys[0], 0);
 }

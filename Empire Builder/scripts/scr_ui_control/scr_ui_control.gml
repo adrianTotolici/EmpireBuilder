@@ -180,16 +180,25 @@ function scr_ui_control(){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_smoke_house_lvl_0;
 				}else{
-					_ui._text_warning="Need 15 straws, 25 clay, 5 stone and 10 sticks resource to build a tool maker.";
+					_ui._text_warning="Need 15 straws, 25 clay, 5 stone and 10 sticks resource to build a smoker.";
 					_ui._show_warning=true;
 				}
 			}
 			if (_my>360-15 && _my<360+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
+				if (check_material_available(obj_fishing_hut_lvl_0)){
+					_ui.obj_to_build_sel=true;
+					_ui.build_obj=obj_fishing_hut_lvl_0;
+				}else{
+					_ui._text_warning="Need 15 straws, 20 clay, 5 stone and 5 sticks resource to build a fishing hut.";
+					_ui._show_warning=true;
+				}
+			}
+			if (_my>400-15 && _my<400+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
 				if (check_material_available(obj_wonder_lvl0)){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_wonder_lvl0;
 				}else{
-					_ui._text_warning="Need 10 straws and 15 clay resource to build a tool maker.";
+					_ui._text_warning="Need 50 straws, 30 clay, 30 stone, 80 sticks resource to build a wonder.";
 					_ui._show_warning=true;
 				}
 			}
