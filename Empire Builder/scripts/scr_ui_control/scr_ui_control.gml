@@ -194,6 +194,15 @@ function scr_ui_control(){
 				}
 			}
 			if (_my>400-15 && _my<400+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
+				if (check_material_available(obj_herbalist_hut_lvl_0)){
+					_ui.obj_to_build_sel=true;
+					_ui.build_obj=obj_herbalist_hut_lvl_0;
+				}else{
+					_ui._text_warning="Need 10 straws, 15 clay, 5 sticks resource to build a herbalist.";
+					_ui._show_warning=true;
+				}
+			}
+			if (_my>440-15 && _my<440+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
 				if (check_material_available(obj_wonder_lvl0)){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_wonder_lvl0;
