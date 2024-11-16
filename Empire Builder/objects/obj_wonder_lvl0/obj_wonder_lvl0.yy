@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_wonder",
-    "path":"sprites/spr_wonder/spr_wonder.yy",
+    "name":"spr_wonder_lvl0",
+    "path":"sprites/spr_wonder_lvl0/spr_wonder_lvl0.yy",
   },
   "spriteMaskId":null,
   "visible":true,

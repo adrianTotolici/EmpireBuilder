@@ -216,7 +216,7 @@ function scr_ui_control(){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_wonder_lvl0;
 				}else{
-					_ui._text_warning="Need 50 straws, 30 clay, 30 stone, 80 sticks resource to build a wonder.";
+					_ui._text_warning="Need 200 stone, 80 sticks resource to build a wonder.";
 					_ui._show_warning=true;
 				}
 			}

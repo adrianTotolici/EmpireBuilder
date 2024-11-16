@@ -128,7 +128,7 @@ if (ui_build_selected){
 	draw_text(x_size_ui-sprite_size-35,440-7,"clayworker")
 	
 	draw_sprite_ext(spr_ui_button_black_background,0,x_size_ui-(sprite_size*2)-40,480,2.7,1,0,c_white,1);
-	draw_sprite_ext(spr_wonder,0,x_size_ui-(sprite_size*2),496,0.5,0.5,0,c_white,1);
+	draw_sprite_ext(spr_wonder_lvl0,0,x_size_ui-(sprite_size*2),496,0.5,0.5,0,c_white,1);
 	draw_text(x_size_ui-sprite_size-35,480-7,"wonder")
 }
 

@@ -37,8 +37,8 @@ function init_values(){
 			//materials
 			ds_map_add(global.resources_gather_map, global.resources_keys[0], 150);
 			ds_map_add(global.resources_gather_map, global.resources_keys[1], 150);
-			ds_map_add(global.resources_gather_map, global.resources_keys[2], 150);
-			ds_map_add(global.resources_gather_map, global.resources_keys[3], 120);
+			ds_map_add(global.resources_gather_map, global.resources_keys[2], 500);
+			ds_map_add(global.resources_gather_map, global.resources_keys[3], 200);
 			ds_map_add(global.resources_gather_map, global.resources_keys[4], 120);
 			ds_map_add(global.resources_gather_map, global.resources_keys[5], 120);
 			ds_map_add(global.resources_gather_map, global.resources_keys[6], 120);
