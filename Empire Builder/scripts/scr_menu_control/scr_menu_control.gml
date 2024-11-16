@@ -24,7 +24,7 @@ function init_values(){
 		global.game_win=false;
 		
 		global.bonuses_map = ds_map_create();
-		global.bonus_keys=["fishing", "herbs"];
+		global.bonus_keys=["fishing", "herbs", "clayworker"];
 		
 		if (global.dev_mode){
 			//food
@@ -84,4 +84,5 @@ function init_values(){
 		
 		ds_map_add(global.bonuses_map, global.bonus_keys[0], 0);
 		ds_map_add(global.bonuses_map, global.bonus_keys[1], 0);
+		ds_map_add(global.bonuses_map, global.bonus_keys[2], 0);
 }

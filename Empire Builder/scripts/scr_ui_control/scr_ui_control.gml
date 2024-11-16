@@ -203,6 +203,15 @@ function scr_ui_control(){
 				}
 			}
 			if (_my>440-15 && _my<440+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
+				if (check_material_available(obj_clayworker_hut_lvl0)){
+					_ui.obj_to_build_sel=true;
+					_ui.build_obj=obj_clayworker_hut_lvl0;
+				}else{
+					_ui._text_warning="Need 8 straws, 5 clay, 5 sticks resource to build a clayworker.";
+					_ui._show_warning=true;
+				}
+			}
+			if (_my>480-15 && _my<480+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
 				if (check_material_available(obj_wonder_lvl0)){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_wonder_lvl0;

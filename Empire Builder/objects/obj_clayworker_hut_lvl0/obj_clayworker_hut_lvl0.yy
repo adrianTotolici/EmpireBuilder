@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_wonder_lvl0",
+  "%Name":"obj_clayworker_hut_lvl0",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,7 +8,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_wonder_lvl0",
+  "name":"obj_clayworker_hut_lvl0",
   "overriddenProperties":[],
   "parent":{
     "name":"buildings",
@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_wonder",
-    "path":"sprites/spr_wonder/spr_wonder.yy",
+    "name":"spr_clayworker_hut_lvl0",
+    "path":"sprites/spr_clayworker_hut_lvl0/spr_clayworker_hut_lvl0.yy",
   },
   "spriteMaskId":null,
   "visible":true,
