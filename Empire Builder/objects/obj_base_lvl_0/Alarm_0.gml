@@ -1,11 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-// Inherit the parent event
-event_inherited();
-
-max_health=50;
-hp=max_health;
-init_prop=false;
-
+instance_create_layer(x, y, "Terrain", obj_tribal_human_hostile);
 generate_enemy=true;

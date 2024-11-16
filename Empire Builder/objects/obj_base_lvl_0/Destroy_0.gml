@@ -1,4 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
-global.game_lost = true;
+if (not enemy_building){
+	global.game_lost = true;
+}

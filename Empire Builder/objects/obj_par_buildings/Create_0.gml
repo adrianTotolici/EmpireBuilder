@@ -6,3 +6,5 @@ storage_space=0;
 destory_object=false;
 max_health=10;
 hp=max_health;
+color_building=noone;
+enemy_building=false;

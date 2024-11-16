@@ -21,3 +21,7 @@ if (hp>1 && hp<max_health){
 	obj_ui.enemy_health=hp;
 	obj_ui.enemy_max_health=max_health;
 }
+
+if (color_building >0){
+	draw_sprite(color_building, 0, x, y);
+}

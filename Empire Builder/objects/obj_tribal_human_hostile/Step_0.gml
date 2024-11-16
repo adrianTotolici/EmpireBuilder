@@ -15,7 +15,7 @@ if (state_attack == false){
 			}
 	    }
 	}
-	if (_nearest_building >0){
+	if (_nearest_building >0 && not _nearest_building.enemy_building){
 		var _distance = point_distance(x, y,_nearest_building.x, _nearest_building.y);
 		if (_distance < range) {
 			show_debug_message("Target is within range.");

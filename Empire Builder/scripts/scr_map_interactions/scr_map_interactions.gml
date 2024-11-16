@@ -49,7 +49,7 @@ function scr_map_interactions(_mx, _my){
 	}
 	
 	// select base
-	if (_buildings_base>0){
+	if (_buildings_base>0 && not _buildings_base.enemy_building){
 		if (_ui._show_base_menu){
 			_ui._show_base_menu=false;
 		}else{
@@ -73,7 +73,7 @@ function scr_map_interactions(_mx, _my){
 		if (_ui._show_building_menu){
 			_ui._show_building_menu=false;
 		}else{
-			if (instance_exists(_buildings)){
+			if (instance_exists(_buildings) and (not _buildings.enemy_building)){
 				_ui._show_building_menu=true;
 				_ui.xpos_building_menu=device_mouse_x_to_gui(0);
 				_ui.ypos_building_menu=device_mouse_y_to_gui(0);
@@ -84,12 +84,16 @@ function scr_map_interactions(_mx, _my){
 	
 	//attack creature
 	if (_ui.ui_attack_selected){
-		if (mouse_check_button_pressed(mb_right) and (instance_exists(_creature))){
+		if (mouse_check_button_pressed(mb_right) and ((instance_exists(_creature)) or ((instance_exists(_buildings) and _buildings.enemy_building)))){
 			// send humas to attack
 			if (global.pop-global.pop_used >0){
 				human=instance_create_layer(obj_base_lvl_0.x, obj_base_lvl_0.y, "Terrain", obj_tribal_human);
 				human.state_attack= true;
-				human.creature_to_attack=_creature;
+				if (instance_exists(_creature)){
+					human.creature_to_attack=_creature;
+				}else if (instance_exists(_buildings)){
+					human.creature_to_attack=_buildings;
+				}
 				human.human_created=true;
 				human.base_posx=obj_base_lvl_0.x;
 				human.base_posy=obj_base_lvl_0.y;
