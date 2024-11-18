@@ -45,6 +45,9 @@ function scr_ui_control(){
 	
 	if (mouse_check_button_pressed(mb_right)){
 		_ui.ui_gather_selected=false;
+		_ui.ui_build_selected = false;
+		_ui.obj_to_build_sel=false;
+		_ui.build_obj=noone;
 		
 	}
 
