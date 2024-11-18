@@ -52,3 +52,22 @@ if (hp<1){
 		}
 	}
 }
+
+if (building){
+	move_towards_point(target_x, target_y, speed);
+	if (point_distance(x, y, target_x, target_y) < speed) {
+		instance_create_layer(x,y,"Terrain",building_to_build);
+		return_to_base =true;
+		building = false;
+	}
+}
+
+if (return_to_base){
+	move_towards_point(obj_base_lvl_0.x,obj_base_lvl_0.y, speed);
+	if (point_distance(x, y, obj_base_lvl_0.x, obj_base_lvl_0.y) < speed) {
+		speed = 0;
+		instance_destroy();
+		global.pop_used -= 1;
+		return_to_base =false;
+	}		
+}

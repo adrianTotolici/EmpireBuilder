@@ -136,14 +136,25 @@ function scr_ui_control(){
 				_ui._show_warning=true;
 				_ui._text_warning="Building can't be placed outside play map.";
 			}else{
-				instance_create_layer(mouse_x,mouse_y,"Terrain",_ui.build_obj);
-				_materials=scr_init_recepies(_ui.build_obj);
-				_ui.obj_to_build_sel=false;
-				_ui.build_obj=noone;
-				var _keys = ds_map_keys_to_array(_materials);
-				for (var _i = 0; _i < array_length(_keys); _i++) {
-					var _value = ds_map_find_value(_materials, _keys[_i]);
-					global.resources_gather_map[? _keys[_i]] = ds_map_find_value(global.resources_gather_map, _keys[_i]) - _value;
+				if (global.pop_used<global.pop){
+					global.pop_used += 1;
+					vilager_build = instance_create_layer(obj_base_lvl_0.x,obj_base_lvl_0.y,"Terrain", obj_tribal_human);
+					vilager_build.target_x = mouse_x;
+					vilager_build.target_y = mouse_y;
+					vilager_build.building_to_build = _ui.build_obj;
+					vilager_build.building= true;
+				
+					_materials=scr_init_recepies(_ui.build_obj);
+					_ui.obj_to_build_sel=false;
+					_ui.build_obj=noone;
+					var _keys = ds_map_keys_to_array(_materials);
+					for (var _i = 0; _i < array_length(_keys); _i++) {
+						var _value = ds_map_find_value(_materials, _keys[_i]);
+						global.resources_gather_map[? _keys[_i]] = ds_map_find_value(global.resources_gather_map, _keys[_i]) - _value;
+					}
+				}else{
+					_ui._text_warning = "Need more population to build"
+					_ui._show_warning = true;
 				}
 			}
 		}else{

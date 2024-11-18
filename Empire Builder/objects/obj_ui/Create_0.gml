@@ -17,7 +17,7 @@ _total_tools = 0;
 _show_tools_menu=false;
 
 display_set_gui_size(x_size_ui,y_size_ui);
-_text_to_display = "Empire Building v0.5";
+_text_to_display = "Empire Building v0.6";
 _text_menu_button = "Menu";
 _text_warning = "";
 

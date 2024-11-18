@@ -1,22 +1,25 @@
+var _display_width = 1280;
+var _display_height = 720;
 if (global.full_screen) {
 	// Enable borderless fullscreen
 	window_enable_borderless_fullscreen(true);
 
 	// Set the window to fullscreen
 	window_set_fullscreen(true);
+	
+	_display_width = window_get_width();
+	_display_height= window_get_height();
 }
 
-// Set the viewport properties
-view_xport[0] = 0; // X position of the viewport on the screen
-view_yport[0] = 0; // Y position of the viewport on the screen
-view_wport[0] = display_get_width(); // Width of the viewport
-view_hport[0] = display_get_height(); // Height of the viewport
+// Resize the application surface
+surface_resize(application_surface, _display_width, _display_height);
+window_set_size(_display_width, _display_height);
+window_center();
+view_enabled = true;
+view_set_visible(0, true);
 
-// Set the view properties
-view_xview[0] = 0; // X position of the view in the room
-view_yview[0] = 0; // Y position of the view in the room
-view_wview[0] = view_wport[0]; // Width of the view
-view_hview[0] = view_hport[0]; // Height of the view
-
+// Set port properties
+view_set_wport(0, _display_width);
+view_set_hport(0, _display_height);
 
 audio_play_sound(snd_zen_pathways, 1, true);
