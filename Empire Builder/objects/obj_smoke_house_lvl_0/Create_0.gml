@@ -10,3 +10,6 @@ max_health=15;
 hp=max_health;
 smoking_meat=false;
 alarm[0]=200;
+building_stage0=spr_smoke_house_lvl0_0;
+building_stage1=spr_smoke_house_lvl0_1;
+building_stage2=spr_smoke_house_lvl0_2;

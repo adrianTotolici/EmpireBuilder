@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"house_lvl1",
-    "path":"folders/Sprites/buildings/house_lvl1.yy",
+    "name":"house",
+    "path":"folders/Sprites/buildings/house.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

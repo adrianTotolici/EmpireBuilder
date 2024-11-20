@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"terrain",
-    "path":"folders/Objects/terrain.yy",
+    "path":"folders/Objects/resources/terrain.yy",
   },
   "parentObjectId":null,
   "persistent":false,
