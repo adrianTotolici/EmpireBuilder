@@ -7,3 +7,8 @@ if (destory_object){
 if (hp<1){
 	instance_destroy();
 }
+
+if (not building_started){
+	alarm[1]=250;
+	building_started = true;
+}

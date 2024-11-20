@@ -106,7 +106,7 @@ if (ui_build_selected){
 	}
 	draw_set_color(_col);
 	draw_sprite_ext(spr_ui_button_grey_background,0,x_size_ui-(sprite_size*2)-40,200,2.7,1,0,c_white,1);
-	draw_sprite_ext(spr_house_lvl0,0,x_size_ui-(sprite_size*2),200,0.5,0.5,0,_col,1);
+	draw_sprite_ext(spr_house_lvl0_2,0,x_size_ui-(sprite_size*2),200,0.5,0.5,0,_col,1);
 	draw_text(x_size_ui-sprite_size-35,200-7,"straw house")
 	
 	if (not check_material_available(obj_storage_lvl_0)){
@@ -146,7 +146,7 @@ if (ui_build_selected){
 	}
 	draw_set_color(_col);
 	draw_sprite_ext(spr_ui_button_grey_background,0,x_size_ui-(sprite_size*2)-40,360,2.7,1,0,c_white,1);
-	draw_sprite_ext(spr_fish_hut_lvl_0,0,x_size_ui-(sprite_size*2),373,0.5,0.5,0,_col,1);
+	draw_sprite_ext(spr_fish_hut_lvl_2,0,x_size_ui-(sprite_size*2),373,0.5,0.5,0,_col,1);
 	draw_text(x_size_ui-sprite_size-35,360-7,"fishing hut")
 	
 	if (not check_material_available(obj_herbalist_hut_lvl_0)){
@@ -166,7 +166,7 @@ if (ui_build_selected){
 	}
 	draw_set_color(_col);
 	draw_sprite_ext(spr_ui_button_grey_background,0,x_size_ui-(sprite_size*2)-40,440,2.7,1,0,c_white,1);
-	draw_sprite_ext(spr_clayworker_hut_lvl0,0,x_size_ui-(sprite_size*2),455,0.5,0.5,0,_col,1);
+	draw_sprite_ext(spr_clayworker_hut_lvl0_2,0,x_size_ui-(sprite_size*2),455,0.5,0.5,0,_col,1);
 	draw_text(x_size_ui-sprite_size-35,440-7,"clayworker")
 	
 	if (not check_material_available(obj_wonder_lvl0)){

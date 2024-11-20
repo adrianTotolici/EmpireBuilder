@@ -26,7 +26,7 @@
   ],
   "name":"spr_smoke_house_lvl0",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"buildings",
     "path":"folders/Sprites/buildings.yy",
@@ -88,7 +88,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":32,
-    "yorigin":64,
+    "yorigin":32,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

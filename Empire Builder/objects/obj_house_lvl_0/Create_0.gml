@@ -10,3 +10,7 @@ global.house +=living_space;
 global.storage_space += storage_space;
 max_health=5;
 hp=max_health;
+
+building_stage0=spr_house_lvl0_0;
+building_stage1=spr_house_lvl0_1;
+building_stage2=spr_house_lvl0_2;

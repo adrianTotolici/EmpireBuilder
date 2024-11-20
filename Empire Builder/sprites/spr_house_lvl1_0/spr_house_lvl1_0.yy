@@ -1,11 +1,11 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_house_lvl1",
+  "%Name":"spr_house_lvl1_0",
   "bboxMode":0,
   "bbox_bottom":63,
-  "bbox_left":6,
-  "bbox_right":52,
-  "bbox_top":18,
+  "bbox_left":0,
+  "bbox_right":63,
+  "bbox_top":29,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -21,19 +21,19 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"a55a5a96-0379-44de-9661-2a577c7adb64","blendMode":0,"displayName":"default","isLocked":false,"name":"a55a5a96-0379-44de-9661-2a577c7adb64","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_house_lvl1",
+  "name":"spr_house_lvl1_0",
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"buildings",
-    "path":"folders/Sprites/buildings.yy",
+    "name":"house_lvl1",
+    "path":"folders/Sprites/buildings/house_lvl1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_house_lvl1",
+    "%Name":"spr_house_lvl1_0",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_house_lvl1",
+    "name":"spr_house_lvl1_0",
     "playback":1,
     "playbackSpeed":0.0,
     "playbackSpeedType":0,
@@ -69,7 +69,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a14c9278-8d8f-49b3-8ac5-526e7d30c225","path":"sprites/spr_house_lvl1/spr_house_lvl1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a14c9278-8d8f-49b3-8ac5-526e7d30c225","path":"sprites/spr_house_lvl1_0/spr_house_lvl1_0.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"02735211-2074-41e6-a3b4-908ff5ca4d28","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

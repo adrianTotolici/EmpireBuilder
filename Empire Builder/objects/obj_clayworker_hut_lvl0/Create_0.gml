@@ -10,3 +10,6 @@ global.bonuses_map[? global.bonus_keys[2]] = ds_map_find_value(global.bonuses_ma
 global.storage_space += storage_space;
 max_health=10;
 hp=max_health;
+building_stage0=spr_clayworker_hut_lvl0_0;
+building_stage1=spr_clayworker_hut_lvl0_1;
+building_stage2=spr_clayworker_hut_lvl0_2;
