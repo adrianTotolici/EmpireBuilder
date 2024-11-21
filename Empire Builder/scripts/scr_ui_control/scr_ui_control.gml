@@ -226,6 +226,16 @@ function scr_ui_control(){
 				}
 			}
 			if (_my>480-15 && _my<480+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
+				if (check_material_available(obj_armor_maker_lvl_0)){
+					_ui.obj_to_build_sel=true;
+					_ui.build_obj=obj_armor_maker_lvl_0;
+				}else{
+					_ui._text_warning="Need 10 straws, 10 clay, 5 stone, 5 sticks and 2 leather resource to build a armorer.";
+					_ui._show_warning=true;
+				}
+			}
+			
+			if (_my>520-15 && _my<520+20 && _mx>x_size_ui-(sprite_size*2)-40 && _mx<x_size_ui){
 				if (check_material_available(obj_wonder_lvl0)){
 					_ui.obj_to_build_sel=true;
 					_ui.build_obj=obj_wonder_lvl0;

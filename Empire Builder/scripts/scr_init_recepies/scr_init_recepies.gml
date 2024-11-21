@@ -52,6 +52,13 @@ function scr_init_recepies(_object){
 			ds_map_add(materials, global.resources_keys[1], 5);
 			ds_map_add(materials, global.resources_keys[3], 5);
 			return materials;
+		case obj_armor_maker_lvl_0:
+			ds_map_add(materials, global.resources_keys[0], 10);
+			ds_map_add(materials, global.resources_keys[1], 10);
+			ds_map_add(materials, global.resources_keys[2], 5);
+			ds_map_add(materials, global.resources_keys[3], 5);
+			ds_map_add(materials, global.resources_keys[6], 2);
+			return materials;
 		case obj_wonder_lvl0:
 			ds_map_add(materials, global.resources_keys[3], 80);
 			ds_map_add(materials, global.resources_keys[2], 200);

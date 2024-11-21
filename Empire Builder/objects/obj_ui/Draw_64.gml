@@ -169,15 +169,25 @@ if (ui_build_selected){
 	draw_sprite_ext(spr_clayworker_hut_lvl0_2,0,x_size_ui-(sprite_size*2),435,0.5,0.5,0,_col,1);
 	draw_text(x_size_ui-sprite_size-35,440-7,"clayworker")
 	
-	if (not check_material_available(obj_wonder_lvl0)){
+	if (not check_material_available(obj_armor_maker_lvl_0)){
 		_col=c_grey;
 	}else{
 		_col=c_white;
 	}
 	draw_set_color(_col);
 	draw_sprite_ext(spr_ui_button_grey_background,0,x_size_ui-(sprite_size*2)-40,480,2.7,1,0,c_white,1);
-	draw_sprite_ext(spr_wonder_lvl0_2,0,x_size_ui-(sprite_size*2),478,0.5,0.5,0,_col,1);
-	draw_text(x_size_ui-sprite_size-35,480-7,"wonder")
+	draw_sprite_ext(spr_armorer_lvl0_2,0,x_size_ui-(sprite_size*2),478,0.5,0.5,0,_col,1);
+	draw_text(x_size_ui-sprite_size-35,480-7,"armorer")
+	
+	if (not check_material_available(obj_wonder_lvl0)){
+		_col=c_grey;
+	}else{
+		_col=c_white;
+	}
+	draw_set_color(_col);
+	draw_sprite_ext(spr_ui_button_grey_background,0,x_size_ui-(sprite_size*2)-40,520,2.7,1,0,c_white,1);
+	draw_sprite_ext(spr_wonder_lvl0_2,0,x_size_ui-(sprite_size*2),521,0.5,0.5,0,_col,1);
+	draw_text(x_size_ui-sprite_size-35,520-7,"wonder")
 }
 
 if (obj_to_build_sel){
