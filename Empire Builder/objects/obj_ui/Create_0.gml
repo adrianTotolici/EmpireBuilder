@@ -15,6 +15,7 @@ _total_food = 0;
 _total_resources = 0;
 _total_tools = 0;
 _show_tools_menu=false;
+_show_armors_menu=false;
 
 display_set_gui_size(x_size_ui,y_size_ui);
 _text_to_display = "Empire Building v0.6";

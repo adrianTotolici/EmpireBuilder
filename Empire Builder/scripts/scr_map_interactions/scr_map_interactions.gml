@@ -3,6 +3,7 @@ function scr_map_interactions(_mx, _my){
 	var _resources = instance_position(_mx, _my, obj_par_resources);
 	var _buildings_base = instance_position(_mx, _my, obj_base_lvl_0);
 	var _buildings_tools = instance_position(_mx, _my, obj_tool_maker_lvl_0);
+	var _buildings_armor = instance_position(_mx, _my, obj_armor_maker_lvl_0);
 	var _buildings = instance_position(_mx, _my, obj_par_buildings);
 	var _creature = instance_position(_mx, _my, obj_par_creatures);
 	
@@ -55,6 +56,7 @@ function scr_map_interactions(_mx, _my){
 		}else{
 			_ui._show_base_menu=true;
 			_ui._show_tools_menu=false;
+			_ui._show_armors_menu=false;
 		}
 	}	
 	
@@ -65,6 +67,19 @@ function scr_map_interactions(_mx, _my){
 		}else{
 			_ui._show_tools_menu=true;
 			_ui._show_base_menu=false;
+			_ui._show_armors_menu=false;
+		}
+	}
+	
+	// select armor maker
+	if (_buildings_armor>0){
+		if (_ui._show_armors_menu){
+			_ui._show_armors_menu=false;
+		}else{
+			_ui._show_armors_menu=true;
+			_ui._show_base_menu=false;
+			_ui._show_tools_menu=false;
+			
 		}
 	}
 	

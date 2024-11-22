@@ -18,6 +18,7 @@ function init_values(){
 		global.food_keys=["berry","fish","herbs","mushrooms","meat","smoked meat"];
 		global.resources_keys=["grass","clay","stone","sticks","flint","bone","hide","wood"];
 		global.tool_keys=["pickaxe","spear","axe"];
+		global.armor_keys=["leather_armor"];
 		global.resources_gather_map =ds_map_create();
 		
 		global.game_lost=false;
@@ -47,12 +48,14 @@ function init_values(){
 			ds_map_add(global.resources_gather_map, global.tool_keys[0], 1);
 			ds_map_add(global.resources_gather_map, global.tool_keys[1], 1);
 			ds_map_add(global.resources_gather_map, global.tool_keys[2], 1);
+			//armors
+			ds_map_add(global.resources_gather_map, global.armor_keys[0], 0);
 		
 			global.pop=1;
 			global.pop_used=0;
 			global.terrain_resource_matrix= [];
 			global.house=0;
-			global.storage_space=1000;
+			global.storage_space=20000;
 		}else{
 			//food
 			ds_map_add(global.resources_gather_map, global.food_keys[0], 10);
@@ -74,6 +77,8 @@ function init_values(){
 			ds_map_add(global.resources_gather_map, global.tool_keys[0], 0);
 			ds_map_add(global.resources_gather_map, global.tool_keys[1], 0);
 			ds_map_add(global.resources_gather_map, global.tool_keys[2], 0);
+			//armors
+			ds_map_add(global.resources_gather_map, global.armor_keys[0], 0);
 		
 			global.pop=4;
 			global.pop_used=0;

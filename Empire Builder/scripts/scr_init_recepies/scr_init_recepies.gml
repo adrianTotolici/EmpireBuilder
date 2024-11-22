@@ -75,6 +75,10 @@ function scr_init_recepies(_object){
 			ds_map_add(materials, global.resources_keys[4], 5);
 			ds_map_add(materials, global.resources_keys[3], 3);
 			return materials;
+		case obj_leather_armor_lvl0:
+			ds_map_add(materials, global.resources_keys[6], 10);
+			ds_map_add(materials, global.resources_keys[0], 4);
+			return materials;
 		default:
 			return materials;
 	}
