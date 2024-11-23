@@ -11,9 +11,11 @@ _show_base_menu=false;
 show_food_invetory=false;
 show_material_inventory=false;
 show_tools_inventory=false;
+show_armors_inventory=false;
 _total_food = 0;
 _total_resources = 0;
 _total_tools = 0;
+_total_armors = 0;
 _show_tools_menu=false;
 _show_armors_menu=false;
 

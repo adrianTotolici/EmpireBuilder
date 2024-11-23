@@ -64,7 +64,13 @@ draw_text(_x_pos_start+264,12,string(floor(_total_resources))+"/"+string(floor(g
 draw_set_color(c_white);
 draw_sprite_ext(spr_ui_button_grey_background,0,_x_pos_start+332,sprite_size/2-10,2,1,0,c_white,1);
 draw_sprite_ext(spr_ui_tools,0,_x_pos_start+360,14,0.8,0.8,0,c_white,1);
-draw_text(_x_pos_start+385,12,string(floor(_total_tools)));
+draw_text(_x_pos_start+420,12,string(floor(_total_tools)));
+
+// Draw armors info
+draw_set_color(c_white);
+draw_sprite_ext(spr_ui_button_grey_background,0,_x_pos_start+468,sprite_size/2-10,2,1,0,c_white,1);
+draw_sprite_ext(spr_ui_armors,0,_x_pos_start+490,25,0.8,0.8,0,c_white,1);
+draw_text(_x_pos_start+560,12,string(floor(_total_armors)));
 	
 //Show warning
 if (_show_warning) {
@@ -278,6 +284,13 @@ if (show_tools_inventory){
 	draw_sprite_ext(spr_ui_axe_0,0,_x_pos_start+350,sprite_size+105,0.45,0.45,0,c_white,1);
 	draw_text(_x_pos_start+385,sprite_size+82,string(floor(ds_map_find_value(global.resources_gather_map, global.tool_keys[2]))));
 	
+}
+
+if (show_armors_inventory){
+	draw_set_color(c_white);
+	draw_sprite_ext(spr_ui_button_grey_background,0,_x_pos_start+468,sprite_size/2+32,2,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_leather_armor,0,_x_pos_start+490,sprite_size/2+45,0.45,0.45,0,c_white,1);
+	draw_text(_x_pos_start+560,sprite_size/2+20,string(floor(ds_map_find_value(global.resources_gather_map, global.armor_keys[0]))));
 }
 
 if (_show_building_menu){

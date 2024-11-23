@@ -293,6 +293,14 @@ function scr_ui_control(){
 			_ui.show_tools_inventory=true;
 		}
 	}
+	// show armor inventory
+	if (mouse_check_button_pressed(mb_left) && _mx>_x_start_pos+468 && _mx<_x_start_pos+598 && _my>0 && _my<sprite_size/2+10){
+		if (_ui.show_armors_inventory){
+			_ui.show_armors_inventory=false;
+		}else{
+			_ui.show_armors_inventory=true;
+		}
+	}
 	
 	//buildings_menu
 	//upgarde

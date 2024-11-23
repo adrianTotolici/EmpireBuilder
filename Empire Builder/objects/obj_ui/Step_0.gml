@@ -48,3 +48,8 @@ _total_tools=0;
 for (var _i=0; _i<array_length(global.tool_keys); _i++){
 	_total_tools += ds_map_find_value(global.resources_gather_map, global.tool_keys[_i]);
 }
+
+_total_armors=0;
+for (var _i=0; _i<array_length(global.armor_keys); _i++){
+	_total_armors += ds_map_find_value(global.resources_gather_map, global.armor_keys[_i]);
+}
