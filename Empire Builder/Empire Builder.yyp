@@ -214,6 +214,7 @@
     {"id":{"name":"spr_ui_population","path":"sprites/spr_ui_population/spr_ui_population.yy",},},
     {"id":{"name":"spr_ui_select","path":"sprites/spr_ui_select/spr_ui_select.yy",},},
     {"id":{"name":"spr_ui_smoked_meat","path":"sprites/spr_ui_smoked_meat/spr_ui_smoked_meat.yy",},},
+    {"id":{"name":"spr_ui_soldier","path":"sprites/spr_ui_soldier/spr_ui_soldier.yy",},},
     {"id":{"name":"spr_ui_spear_0","path":"sprites/spr_ui_spear_0/spr_ui_spear_0.yy",},},
     {"id":{"name":"spr_ui_stick","path":"sprites/spr_ui_stick/spr_ui_stick.yy",},},
     {"id":{"name":"spr_ui_stone","path":"sprites/spr_ui_stone/spr_ui_stone.yy",},},

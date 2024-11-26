@@ -36,10 +36,16 @@ if (ui_attack_selected){
 
 var _x_pos_start=x_size_ui/2-196;
 
+//Draw soldier info
+draw_set_color(c_white);
+draw_sprite_ext(spr_ui_button_grey_background,0,_x_pos_start-sprite_size*1.5-100,sprite_size/2-10,1.5,1,0,c_white,1);
+draw_sprite_ext(spr_ui_soldier,0,_x_pos_start-175,22,0.4,0.4,0,c_white,1);
+draw_text(_x_pos_start-145,12,string(floor(global.soldiers_used))+"/"+string(floor(global.soldiers)));
+
 //Draw pop info
 draw_set_color(c_white);
 draw_sprite_ext(spr_ui_button_grey_background,0,_x_pos_start-sprite_size*1.5,sprite_size/2-10,1.5,1,0,c_white,1);
-draw_sprite_ext(spr_ui_population,0,_x_pos_start-75,20,0.5,0.5,0,c_white,1);
+draw_sprite_ext(spr_ui_population,0,_x_pos_start-75,22,0.4,0.4,0,c_white,1);
 draw_text(_x_pos_start-45,12,string(floor(global.pop_used))+"/"+string(floor(global.pop)));
 
 // Draw building info

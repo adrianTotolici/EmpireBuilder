@@ -56,6 +56,8 @@ function init_values(){
 			global.terrain_resource_matrix= [];
 			global.house=20;
 			global.storage_space=10000;
+			global.soldiers=0;
+			global.soldiers_used=0;
 		}else{
 			//food
 			ds_map_add(global.resources_gather_map, global.food_keys[0], 10);
