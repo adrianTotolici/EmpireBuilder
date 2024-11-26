@@ -29,7 +29,7 @@ function init_values(){
 		
 		if (global.dev_mode){
 			//food
-			ds_map_add(global.resources_gather_map, global.food_keys[0], 10000);
+			ds_map_add(global.resources_gather_map, global.food_keys[0], 5000);
 			ds_map_add(global.resources_gather_map, global.food_keys[1], 0);
 			ds_map_add(global.resources_gather_map, global.food_keys[2], 0);
 			ds_map_add(global.resources_gather_map, global.food_keys[3], 0);
@@ -51,11 +51,11 @@ function init_values(){
 			//armors
 			ds_map_add(global.resources_gather_map, global.armor_keys[0], 0);
 		
-			global.pop=1;
+			global.pop=20;
 			global.pop_used=0;
 			global.terrain_resource_matrix= [];
-			global.house=0;
-			global.storage_space=20000;
+			global.house=20;
+			global.storage_space=10000;
 		}else{
 			//food
 			ds_map_add(global.resources_gather_map, global.food_keys[0], 10);

@@ -20,7 +20,7 @@ _show_tools_menu=false;
 _show_armors_menu=false;
 
 display_set_gui_size(x_size_ui,y_size_ui);
-_text_to_display = "Empire Building v0.6";
+_text_to_display = "Empire Building v0.7";
 _text_menu_button = "Menu";
 _text_warning = "";
 
