@@ -34,7 +34,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"spr_human_move_side_blue",
     "path":"sprites/spr_human_move_side_blue/spr_human_move_side_blue.yy",

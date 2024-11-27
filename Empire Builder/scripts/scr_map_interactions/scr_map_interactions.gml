@@ -101,8 +101,12 @@ function scr_map_interactions(_mx, _my){
 	if (_ui.ui_attack_selected){
 		if (mouse_check_button_pressed(mb_right) and ((instance_exists(_creature)) or ((instance_exists(_buildings) and _buildings.enemy_building)))){
 			// send humas to attack
-			if (global.pop-global.pop_used >0){
-				human=instance_create_layer(obj_base_lvl_0.x, obj_base_lvl_0.y, "Terrain", obj_tribal_human);
+			if (global.soldiers-global.soldiers_used >0 || global.pop-global.pop_used >0){
+				if (global.soldiers == global.soldiers_used){
+					human=instance_create_layer(obj_base_lvl_0.x, obj_base_lvl_0.y, "Terrain", obj_tribal_human);
+				}else{
+					human=instance_create_layer(obj_base_lvl_0.x, obj_base_lvl_0.y, "Terrain", obj_tribal_soldier);
+				}
 				human.state_attack= true;
 				if (instance_exists(_creature)){
 					human.creature_to_attack=_creature;
@@ -112,7 +116,12 @@ function scr_map_interactions(_mx, _my){
 				human.human_created=true;
 				human.base_posx=obj_base_lvl_0.x;
 				human.base_posy=obj_base_lvl_0.y;
-				global.pop_used += 1;
+				if (global.soldiers == global.soldiers_used){
+					global.pop_used += 1;
+				}else{
+					global.soldiers_used += 1;
+				}
+				
 			}
 		}
 	}

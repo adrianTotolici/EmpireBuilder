@@ -87,6 +87,8 @@ function init_values(){
 			global.terrain_resource_matrix= [];
 			global.house=0;
 			global.storage_space=0;
+			global.soldiers=0;
+			global.soldiers_used=0;
 		}
 		
 		ds_map_add(global.bonuses_map, global.bonus_keys[0], 0);

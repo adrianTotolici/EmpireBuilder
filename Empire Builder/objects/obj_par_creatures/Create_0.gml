@@ -25,6 +25,7 @@ creature_to_defend = noone;
 max_health=10;
 hp=max_health;
 atk=1;
+def=0;
 
 start_fight =false;
 finish_fight = false;

@@ -34,7 +34,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"spr_human_stand_red",
     "path":"sprites/spr_human_stand_red/spr_human_stand_red.yy",

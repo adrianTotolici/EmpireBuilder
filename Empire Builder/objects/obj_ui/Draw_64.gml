@@ -90,6 +90,11 @@ if (_show_base_menu){
 	draw_sprite_ext(spr_ui_button_grey_background,0,0,y_size_ui/2,1.5,1,0,c_white,1);
 	draw_sprite_ext(spr_ui_population,0,sprite_size/2,y_size_ui/2,0.5,0.5,0,c_white,1);
 	draw_text(55,y_size_ui/2-7,"+ 1")
+	
+	draw_set_color(c_white);
+	draw_sprite_ext(spr_ui_button_grey_background,0,0,y_size_ui/2-50,1.5,1,0,c_white,1);
+	draw_sprite_ext(spr_ui_soldier,0,sprite_size/2,y_size_ui/2-50,0.5,0.5,0,c_white,1);
+	draw_text(55,y_size_ui/2-57,"+ 1")
 }
 
 //show tools menu

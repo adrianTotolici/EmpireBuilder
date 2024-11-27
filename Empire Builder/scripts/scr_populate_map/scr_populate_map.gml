@@ -2,9 +2,15 @@ function scr_populate_map(_sprite_size){
 	home_base = instance_create_layer(x, y, "Terrain", obj_base_lvl_0);
 	home_base.color_building=spr_main_building_lvl0_blue;
 	
-	enemy_base = instance_create_layer(random_range(0,room_width), random_range(0,room_height), "Terrain", obj_base_lvl_0);
-	enemy_base.color_building=spr_main_building_lvl0_red;
-	enemy_base.enemy_building = true;
+	nr_of_hostiles_bases=random_range(10,30);
+	for (i=1; i<=nr_of_hostiles_bases; i++){
+		xpos=random_range(0,room_width);
+		ypos=random_range(0,room_height);
+		enemy_base = instance_create_layer(xpos,ypos, "Terrain", obj_base_lvl_0);
+		enemy_base.color_building=spr_main_building_lvl0_red;
+		enemy_base.enemy_building = true;
+	}
+
 	
 	
 	var _berry_bush = 0.01;

@@ -5,6 +5,7 @@ function scr_ui_control(){
 	var _x_start_pos=x_size_ui/2-196;
 		
 	var _human_price=10;
+	var _soldier_price=10;
 
 	//press exit main menu button
 	if (mouse_check_button_pressed(mb_left) && _my>=12 && _my<=_ui.sprite_size-12 && _mx>=_ui.x_size_ui-(_ui.sprite_size*_ui.ui_button_scale) && _mx<=_ui.x_size_ui){
@@ -52,31 +53,63 @@ function scr_ui_control(){
 	}
 
 	// build human menu button
-	if (mouse_check_button_pressed(mb_left) && _my>y_size_ui/2-15 && _my<y_size_ui/2+20 && _mx>0 && _mx<sprite_size*1.5-10 && _ui._show_base_menu){
-		if (global.house >= global.pop+1){
-			var _total_food = 0;
-			for (var _i=0; _i<array_length(global.food_keys); _i++){
-				_total_food += ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
-			}
-			if (_total_food>=_human_price){
-				_food_to_pay=_human_price;
+	if (mouse_check_button_pressed(mb_left) &&  _ui._show_base_menu){
+		if (_my>y_size_ui/2-15 && _my<y_size_ui/2+20 && _mx>0 && _mx<sprite_size*1.5-10){
+			if (global.house >= global.pop+1){
+				var _total_food = 0;
 				for (var _i=0; _i<array_length(global.food_keys); _i++){
-					if (_food_to_pay <= ds_map_find_value(global.resources_gather_map, global.food_keys[_i])){
-						global.resources_gather_map[? global.food_keys[_i]] = ds_map_find_value(global.resources_gather_map, global.food_keys[_i]) - _food_to_pay;
-						break;
-					}else{		
-						_food_to_pay -= ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
-						global.resources_gather_map[? global.food_keys[_i]] = 0;
-					}
+					_total_food += ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
 				}
-				global.pop += 1;
+				if (_total_food>=_human_price){
+					_food_to_pay=_human_price;
+					for (var _i=0; _i<array_length(global.food_keys); _i++){
+						if (_food_to_pay <= ds_map_find_value(global.resources_gather_map, global.food_keys[_i])){
+							global.resources_gather_map[? global.food_keys[_i]] = ds_map_find_value(global.resources_gather_map, global.food_keys[_i]) - _food_to_pay;
+							break;
+						}else{		
+							_food_to_pay -= ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
+							global.resources_gather_map[? global.food_keys[_i]] = 0;
+						}
+					}
+					global.pop += 1;
+				}else{
+					_ui._text_warning="Need "+string(_human_price)+" more food";
+					_ui._show_warning=true;
+				}
 			}else{
-				_ui._text_warning="Need "+string(_human_price)+" more food";
+				_ui._text_warning="Need more houses";
 				_ui._show_warning=true;
 			}
-		}else{
-			_ui._text_warning="Need more houses";
-			_ui._show_warning=true;
+		}
+		
+		if (_my>y_size_ui/2-65 && _my<y_size_ui/2+30 && _mx>0 && _mx<sprite_size*1.5-10){
+			if (global.pop_used < global.pop){
+				var _total_food = 0;
+				for (var _i=0; _i<array_length(global.food_keys); _i++){
+					_total_food += ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
+				}
+				if (_total_food>=_soldier_price && ds_map_find_value(global.resources_gather_map, global.tool_keys[1]) > 0 && ds_map_find_value(global.resources_gather_map, global.armor_keys[0]) > 0){
+					_food_to_pay=_soldier_price;
+					for (var _i=0; _i<array_length(global.food_keys); _i++){
+						if (_food_to_pay <= ds_map_find_value(global.resources_gather_map, global.food_keys[_i])){
+							global.resources_gather_map[? global.food_keys[_i]] = ds_map_find_value(global.resources_gather_map, global.food_keys[_i]) - _food_to_pay;
+							break;
+						}else{		
+							_food_to_pay -= ds_map_find_value(global.resources_gather_map, global.food_keys[_i]);
+							global.resources_gather_map[? global.food_keys[_i]] = 0;
+						}
+					}
+					global.resources_gather_map[? global.armor_keys[0]] = ds_map_find_value(global.resources_gather_map, global.armor_keys[0]) - 1;
+					global.resources_gather_map[? global.tool_keys[1]] = ds_map_find_value(global.resources_gather_map, global.tool_keys[1]) - 1;
+					global.soldiers += 1;
+				}else{
+					_ui._text_warning="Need "+string(_soldier_price)+" more food";
+					_ui._show_warning=true;
+				}
+			}else{
+				_ui._text_warning="Need more free population.";
+				_ui._show_warning=true;
+			}
 		}
 	}
 	
