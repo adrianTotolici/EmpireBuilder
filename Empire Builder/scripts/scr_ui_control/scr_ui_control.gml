@@ -375,7 +375,10 @@ function update_building(_ui){
 	switch (_building.object_index) { 
 		case obj_house_lvl_0: 
 			new_building = obj_house_lvl_1; 
-			break; 
+			break;
+		case obj_tool_maker_lvl_0: 
+			new_building = obj_tool_maker_lvl_1; 
+			break;
 		default: 
 			building_valid= false;
 			break; 
