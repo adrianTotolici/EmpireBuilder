@@ -8,6 +8,7 @@ max_health=10;
 hp=max_health;
 color_building=noone;
 enemy_building=false;
+def=0;
 
 building_started=false;
 building_stage0=noone;

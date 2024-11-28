@@ -379,6 +379,9 @@ function update_building(_ui){
 		case obj_tool_maker_lvl_0: 
 			new_building = obj_tool_maker_lvl_1; 
 			break;
+		case obj_storage_lvl_0: 
+			new_building = obj_storage_lvl_1; 
+			break;
 		default: 
 			building_valid= false;
 			break; 
