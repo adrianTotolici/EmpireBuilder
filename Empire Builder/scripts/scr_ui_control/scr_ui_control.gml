@@ -382,6 +382,10 @@ function update_building(_ui){
 		case obj_storage_lvl_0: 
 			new_building = obj_storage_lvl_1; 
 			break;
+		case obj_base_lvl_0:
+			new_building = obj_base_lvl_1
+			_ui._selected_building._show_base_menu=false;
+			break;
 		default: 
 			building_valid= false;
 			break; 
@@ -395,6 +399,7 @@ function update_building(_ui){
 				var _value = ds_map_find_value(_materials, _keys[_i]);
 				global.resources_gather_map[? _keys[_i]] = ds_map_find_value(global.resources_gather_map, _keys[_i]) - _value;
 			}
+			_ui._selected_building.upgrade=true;
 			_ui._selected_building.destory_object=true;
 			_ui._show_building_menu=false;
 		}else{

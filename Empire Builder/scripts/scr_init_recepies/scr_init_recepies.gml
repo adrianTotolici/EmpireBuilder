@@ -12,6 +12,11 @@ function scr_init_recepies(_object){
 			ds_map_add(materials, global.resources_keys[2], 5);
 			ds_map_add(materials, global.resources_keys[3], 15);
 			return materials;
+		case obj_base_lvl_1:
+			ds_map_add(materials, global.resources_keys[0], 50);
+			ds_map_add(materials, global.resources_keys[3], 10);
+			ds_map_add(materials, global.resources_keys[7], 10);
+			return materials;
 		case obj_house_lvl_0:
 			ds_map_add(materials, global.resources_keys[0], 10);
 			ds_map_add(materials, global.resources_keys[3], 5);

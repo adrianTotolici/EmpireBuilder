@@ -1,8 +1,10 @@
 function scr_map_interactions(_mx, _my){
 	var _ui=obj_ui;
 	var _resources = instance_position(_mx, _my, obj_par_resources);
-	var _buildings_base = instance_position(_mx, _my, obj_base_lvl_0);
-	var _buildings_tools = instance_position(_mx, _my, obj_tool_maker_lvl_0);
+	var _buildings_base0 = instance_position(_mx, _my, obj_base_lvl_0);
+	var _buildings_base1 = instance_position(_mx, _my, obj_base_lvl_1);
+	var _buildings_tools0 = instance_position(_mx, _my, obj_tool_maker_lvl_0);
+	var _buildings_tools1 = instance_position(_mx, _my, obj_tool_maker_lvl_1);
 	var _buildings_armor = instance_position(_mx, _my, obj_armor_maker_lvl_0);
 	var _buildings = instance_position(_mx, _my, obj_par_buildings);
 	var _creature = instance_position(_mx, _my, obj_par_creatures);
@@ -50,7 +52,7 @@ function scr_map_interactions(_mx, _my){
 	}
 	
 	// select base
-	if (_buildings_base>0 && not _buildings_base.enemy_building){
+	if ((_buildings_base0>0  and not _buildings_base0.enemy_building) || (_buildings_base1>0 &&  not _buildings_base1.enemy_building)){
 		if (_ui._show_base_menu){
 			_ui._show_base_menu=false;
 		}else{
@@ -61,7 +63,7 @@ function scr_map_interactions(_mx, _my){
 	}	
 	
 	// select tool maker
-	if (_buildings_tools>0){
+	if (_buildings_tools0>0 || _buildings_tools1>0){
 		if (_ui._show_tools_menu){
 			_ui._show_tools_menu=false;
 		}else{

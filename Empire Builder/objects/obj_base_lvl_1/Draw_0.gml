@@ -4,9 +4,3 @@
 // Inherit the parent event
 event_inherited();
 
-max_health=50;
-hp=max_health;
-init_prop=false;
-
-generate_enemy=true;
-upgrade = false;

@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"buildings",
-    "path":"folders/Sprites/buildings.yy",
+    "name":"main_building",
+    "path":"folders/Sprites/buildings/main_building.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

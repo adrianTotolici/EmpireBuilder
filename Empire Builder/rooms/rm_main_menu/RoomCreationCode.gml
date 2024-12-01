@@ -1,6 +1,6 @@
 var _display_width = 1280;
 var _display_height = 720;
-global.dev_mode=false;
+global.dev_mode=true;
 if (global.dev_mode){
 	global.full_screen=false;
 }else{
