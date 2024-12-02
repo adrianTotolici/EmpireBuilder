@@ -82,7 +82,7 @@ function scr_ui_control(){
 			}
 		}
 		
-		if (_my>y_size_ui/2-65 && _my<y_size_ui/2+30 && _mx>0 && _mx<sprite_size*1.5-10){
+		if (_my>y_size_ui/2-65 && _my<y_size_ui/2-30 && _mx>0 && _mx<sprite_size*1.5-10){
 			if (global.pop_used < global.pop){
 				var _total_food = 0;
 				for (var _i=0; _i<array_length(global.food_keys); _i++){
