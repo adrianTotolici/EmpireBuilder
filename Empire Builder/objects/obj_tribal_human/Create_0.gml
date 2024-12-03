@@ -19,3 +19,6 @@ spr_attack=spr_human_attack_blue;
 building=false;
 return_to_base = false;
 building_to_build=noone;
+
+return_base_x = 0;
+return_base_y = 0;

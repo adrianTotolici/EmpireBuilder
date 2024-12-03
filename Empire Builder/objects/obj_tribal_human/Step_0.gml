@@ -63,8 +63,8 @@ if (building){
 }
 
 if (return_to_base){
-	move_towards_point(obj_base_lvl_0.x,obj_base_lvl_0.y, speed);
-	if (point_distance(x, y, obj_base_lvl_0.x, obj_base_lvl_0.y) < speed) {
+	move_towards_point(return_base_x,return_base_y, speed);
+	if (point_distance(x, y, return_base_x, return_base_y) < speed) {
 		speed = 0;
 		instance_destroy();
 		global.pop_used -= 1;

@@ -196,9 +196,23 @@ function scr_ui_control(){
 			}else{
 				if (global.pop_used<global.pop){
 					global.pop_used += 1;
-					vilager_build = instance_create_layer(obj_base_lvl_0.x,obj_base_lvl_0.y,"Terrain", obj_tribal_human);
+					
+					x_base=0;
+					y_base=0;
+					
+					if (check_instance_existance(obj_base_lvl_0)){
+						x_base = obj_base_lvl_0.x;
+						y_base = obj_base_lvl_0.y;
+					}else if (check_instance_existance(obj_base_lvl_1)){
+						x_base = obj_base_lvl_1.x;
+						y_base = obj_base_lvl_1.y;
+					}
+					
+					vilager_build = instance_create_layer(x_base,y_base,"Terrain", obj_tribal_human);
 					vilager_build.target_x = mouse_x;
 					vilager_build.target_y = mouse_y;
+					vilager_build.return_base_x = x_base;
+					vilager_build.return_base_y = y_base;
 					vilager_build.building_to_build = _ui.build_obj;
 					vilager_build.building= true;
 				
@@ -410,4 +424,18 @@ function update_building(_ui){
 		_ui._text_warning="No future update available.";
 		_ui._show_warning=true;
 	}
+}
+
+function check_instance_existance(_instance){
+	var instance_list = ds_list_create(); 
+	with (all) { 
+		ds_list_add(instance_list, _instance); 
+	}
+	for (var i=0; i<ds_list_size(instance_list); i++){
+		var item = ds_list_find_value(instance_list, i);
+		if (not item.enemy_building){
+			return true;
+		}
+	}
+	return false;
 }
