@@ -427,13 +427,13 @@ function update_building(_ui){
 }
 
 function check_instance_existance(_instance){
-	var instance_list = ds_list_create(); 
+	var _instance_list = ds_list_create(); 
 	with (all) { 
-		ds_list_add(instance_list, _instance); 
+		ds_list_add(_instance_list, _instance); 
 	}
-	for (var i=0; i<ds_list_size(instance_list); i++){
-		var item = ds_list_find_value(instance_list, i);
-		if (not item.enemy_building){
+	for (var _i=0; _i<ds_list_size(_instance_list); _i++){
+		var _item = ds_list_find_value(_instance_list, _i);
+		if (not _item.enemy_building){
 			return true;
 		}
 	}

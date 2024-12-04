@@ -70,6 +70,9 @@ function scr_map_interactions(_mx, _my){
 			_ui._show_tools_menu=true;
 			_ui._show_base_menu=false;
 			_ui._show_armors_menu=false;
+			if (_buildings_tools1>0){
+				_ui._clicked_building=obj_tool_maker_lvl_1;
+			}
 		}
 	}
 	

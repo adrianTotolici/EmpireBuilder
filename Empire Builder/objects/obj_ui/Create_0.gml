@@ -35,5 +35,6 @@ _show_building_menu=false;
 xpos_building_menu=0;
 ypos_building_menu=0;
 _selected_building=noone;
+_clicked_building=noone;
 
 button_bg_col = make_color_rgb(76, 76, 76);
